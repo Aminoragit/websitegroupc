@@ -1,0 +1,119 @@
+﻿	$(document).ready(function(){
+		var allmenu = $('.all-menu');
+		var metro = $('.datactlg-box');
+		var quick = $('.quick_menu li a');
+
+		allmenu.hover(function(){
+			$(this).addClass('hover');
+			}, function() {
+			$(this).removeClass('hover');
+		});
+		metro.hover(function(){
+			$(this).addClass('hover');
+			}, function() {
+			$(this).removeClass('hover');
+		});
+		quick.hover(function(){
+			$(this).addClass('hover');
+			}, function() {
+			$(this).removeClass('hover');
+		});
+		
+		lodingNoticePopup(); //main.js 공지사항 로딩
+
+//	 	openGdsPopup();
+		
+		function openGdsPopup() {
+			var top = 0;
+			var left = 0;
+			var option = {
+					top : top
+					,left : left
+					,width : '576'
+					,height : '432'
+					,scrollbars : "no"
+					,status : "no"
+					,toolbar : "no"
+					,menubar : "no"
+					,resizable : "no"
+					,fullscreen : "no"
+			};
+			
+			if(CookieUtil.getCookie("gdsPop") != "done") {			
+				popupWindow('/html/gdsPopup.html', 'gdsPop', option, null);
+			}
+			
+		}
+		
+		var uAgent = navigator.userAgent;
+
+		if(uAgent.indexOf("Windows") != -1){		
+			$('#join_process').html('<a href="/resources/contents/main/202001_member_join_process.pdf" target="_blank"><strong>기상자료</strong><strong>개방포털</strong><strong>사용법</strong></a>');
+		}
+		
+		/* bx슬라이드 플러그인 */
+		$('.banner').bxSlider({ 
+	    	auto: true, 
+	    	speed: 800, 
+	    	pause: 4000, 
+	    	mode:'horizontal', 
+	    	autoControls: true, 
+	    	pager:true,
+    	});
+    });
+
+	//공지사항 팝업 조회
+	function lodingNoticePopup(){
+		$.getJSON('/board/selectBoardAjaxList.do'
+				, {
+					schBbrdTypeNo : '2'
+					,popYn : 'Y'
+					,firstIndex : 0
+					,lastIndex : 10
+				 }
+				,function(data){
+					if(data.data){
+						$(data.data).each(function(){
+							openNoticePopup(this.bbrdTypeNo, this.bbrdNo);
+						});
+					}
+				}
+		);
+	}
+	
+	var popupIndex = 0;
+	
+	//공지사항 팝업 노출
+	function openNoticePopup(bbrdTypeNo, popupSeq){
+		var top = popupIndex * 40;
+		var left = popupIndex * 30;
+		var option = {
+				top : top
+				,left : left
+				,width : '520'
+				,height : '420'
+				,scrollbars : "no"
+				,status : "no"
+				,toolbar : "no"
+				,menubar : "no"
+				,resizable : "no"
+				,fullscreen : "no"
+		};
+		var popName = "notice" + popupSeq;
+		
+		if(CookieUtil.getCookie(popName) != "done") {
+			popupWindow('/cmmn/commonNoticePopup.do?bbrdTypeNo='+bbrdTypeNo+'&bbrdNo=' + popupSeq, popName, option, null);
+		}
+		
+		popupIndex++;
+		
+	}
+	
+	function downloadPdf(filePath, fileName){
+		$("#filePath").val(filePath);
+		$("#fileName").val(fileName);
+
+		$("#hiddenForm").attr("target", "hiddenFrame");
+		$("#hiddenForm").attr("action", "/download/downloadPdf.do").submit();
+		$("#hiddenForm").attr("target", "");
+	}
