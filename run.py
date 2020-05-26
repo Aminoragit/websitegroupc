@@ -2,11 +2,8 @@ from flask import Flask, render_template, request, jsonify
 import warnings
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-import pymysql.cursors
 
 # mysql ##########################
 
@@ -62,4 +59,4 @@ def training():
 	return jsonify(resultdata=resultdata)
 	
 if __name__ == "__main__":
-    app.run(host='127.0.0.1',port='8888')
+    app.run() #host='127.0.0.1',port='8888'
