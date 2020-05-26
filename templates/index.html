@@ -6,22 +6,6 @@
       <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
       <script type=text/javascript>
         $(function() {
-            $('#calculate').click(function(){
-              $.ajax({
-                url: '/addnumber',
-                data:{
-                  a: $('#a').val(),
-                  b: $('#b').val(),
-                },
-                dataType: 'JSON',
-                type: 'GET',
-                success: function(data){
-                    $("#result").html(data.result2);
-                }
-                });
-             });
-        });	
-        $(function() {
             $('#training').click(function(){
               $.ajax({
                 url: '/train',
@@ -33,12 +17,10 @@
                 success: function(data){
                     $("#resulttrain").html(data.resultdata['resulttrain']);
                     $("#resulttest").html(data.resultdata['resulttest']);
-
                 }
                 });
              });
         });
-
   </script>
   </head>
   <body>
@@ -49,14 +31,10 @@
       <hr/>
       <div>
       <p>
-    <input type="text" id='a' size="5" name="a"> +
-    <input type="text" id='b' size="5" name="b"> =
-    <span id="result">?</span>
     <p><input type="text" id='c' size="5" name="c">
     <p><span id="resulttrain">훈련세트점수</span>
     <p><span id="resulttest">검증세트점수</span>
 
-    <p><button class="btn btn-success" id="calculate">calculate</button>
     <p><button class="btn btn-success" id="training">training</button>
       </form>
       </div>
