@@ -37,7 +37,20 @@
 <script type="text/javascript" src="./index_files/jquery.mCustomScrollbar.min.js.다운로드"></script>
 <script type="text/javascript" src="./index_files/jquery.bxslider.min.js.다운로드"></script>
 <script type="text/javascript" src="./index_files/jquery.ztree.all-3.5.min.js.다운로드"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "C:/Users/TJOEUN-JR/Documents/GitHub/websitegroupc/MYSCRIPT.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
 <style type="text/css">
+
 #loading-mask {
     position:absolute;
     top:0;
@@ -137,7 +150,7 @@ $(function(){
 ">
 				<!-- 검색영역 -->
 				<div class="search_box">					
-					<form id="searchForm" name="searchForm" action="result.py" style="
+					<form id="searchForm" name="searchForm" style=" 
     width: 800px;
 ">
 						<input type="text" name="insertData" id="insertData" title="&#39;최대 깊이(Depth)를 입력하시오" placeholder="최대 깊이(Depth)를 입력하시오" value="" style="
@@ -145,11 +158,12 @@ $(function(){
     padding-left: 0px;
     margin-left: 10px;
 ">
-						<button class="btn btn-primary" style="
+						<button class="btn btn-primary"  onclick="goPython()" style="
     padding-left: 0px;
     padding-right: 0px;
     width: 62px;
 ">입력</button>
+
 					</form>					
 				</div>
 				<!-- 검색영역 -->	</div>
