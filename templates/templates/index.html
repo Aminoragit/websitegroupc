@@ -15,7 +15,6 @@
                 dataType: 'JSON',
                 type: 'GET',
                 success: function(data){
-                    console.log(data)
                     $("#resulttrain").html(data.resultdata['resulttrain']);
                     $("#resulttest").html(data.resultdata['resulttest']);
                 }
