@@ -1,0 +1,23 @@
+ .history .search-form-container2 #TB_search {
+ 	margin: 10px 0 13px;
+ 	padding: 10px;
+ }
+ 
+ .history .search-form-container2 #TB_search input.input-medium {
+ 	/* padding: 0px; */
+ }
+ 
+#gridInfo th{font-size: 12px;}
+#gridInfo td{font-size: 12px;}
+
+ span.fc-title{
+ 	font-size: 10px;
+ }
+ 
+ .fc h2 {
+ 	font-weight: bold;
+ }
+ 
+ div .fc-content {
+ 	font-size: 12px;
+ }
