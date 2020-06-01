@@ -264,7 +264,20 @@ function favoritePopup(){
 		
 }
 </script>
-
+		<script type="text/javascript">
+	$(document).ready(function () {
+		
+		$(".sitemap-d2 li").mouseover(function(){
+			$(this).find(".sitemap-d3").show();
+			$(this).addClass("on");
+		});
+		
+		$(".sitemap-d2 li").mouseout(function(){
+			$(this).find(".sitemap-d3").hide();
+			$(this).removeClass("on");
+		});	
+	});
+</script>
 
 	
 	<!-- header -->
@@ -378,26 +391,24 @@ function favoritePopup(){
 					<div class="mgnbs-div">
 						<div class="mgnbs-div2">
 							<dl style="height: 150px;width: 250px;">
-							<dt class="sub3_1" style="margin-bottom: 10px;">
-								<p>전처리 데이터</p>
-							</dt>
-							<dd>
-								<ul>
-									<li class="sub3_1_1"><a href="https://data.kma.go.kr/html/koreasea/KoreaSeaList.do" adsea/koreaSeaList.do&#39;,&#39;113&#39;);return false;">대한민국 해양 오염정도</a></li>
-									<li class="sub3_1_2"><a href="https://data.kma.go.kr/climate/average30Years/selectAverage30YearsWorldList.do" verage30Years/selectAverage30YearsWorldList.do&#39;,&#39;560&#39;);return false;">쓰레기 수거업체 일일 수거량</a></li>
+								<dt class="sub3_1" style="margin-bottom: 10px;">
+									<p>전처리 데이터</p>
+								</dt>
+								<dd>
+									<ul>
+										<li class="sub3_1_1"><a href="주소입력">대한민국 해양 오염정도</a></li>
+										<li class="sub3_1_2"><a href="주소입력" >쓰레기 수거업체 일일 수거량</a></li>
 									</ul>									
 							</dd>
-						</dl>
+							</dl>
 							<dl>
 								<dt class="sub3_2">
 									<p>DB 조회</p>
 								</dt>
 								<dd>
 									<ul>
-										<li class="sub3_2_1"><a href="href="https://aminoragit.github.io/websitegroupc/html/DBsearch.html">DB 조회 방법</a></li>
-										<li class="sub3_2_2"><a href="href="https://aminoragit.github.io/websitegroupc/html/DBsearch.html">DB 조회페이지</a></li>
-
-
+										<li class="sub3_2_1"><a href="주소입력">DB 조회 방법</a></li>
+										<li class="sub3_2_2"><a href="주소입력">DB 조회페이지</a></li>
 										</ul>									
 								</dd>		
 							</dl>	
@@ -410,7 +421,7 @@ function favoritePopup(){
 
 				<div class="samenu1">
 					<a href="#"><img src="./index_files/image/all_btn1.gif" alt="전체 메뉴 보기"></a>
-					<div class="mgnbs-div3" style="display: none;">
+					<div class="mgnbs-div3" style="display: block;width: 1080px;">
 						<div class="section-sitemap">
 							<ul class="sitemap-d1 s1">
 								<li><a href="machine_learning">머신러닝/딥러닝</a>
@@ -437,146 +448,59 @@ function favoritePopup(){
 							<ul class="sitemap-d1 s2">
 								<li><a href="데이터셋 사이트 주소">데이터셋 사이트</a>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="데이터셋 사이트 주소 1">기상청정보개방</a>
+										<li class="has-child"><a href="">공공데이터 포털 추천</a>
 											<ul class="sitemap-d3">
-												<li><a href="데이터셋 사이트 주소1_1">우리나라 기후평년값</a></li>
-												<li><a href="데이터셋 사이트 주소1_2">세계기후평년값</a></li>
+												<li><a href="https://www.data.go.kr/">공공데이터 포털</a></li>
+												<li><a href="http://data.seoul.go.kr/">서울 데이터 센터</a></li>
+												<li><a href="https://developers.naver.com/main/">네이버 Open API</a></li>
+												<li><a href="https://developers.kakao.com/">카카오 Open API</a></li>
 												</ul>
 											</li>
 									</ul>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="">통계분석</a>
+										<li class="has-child"><a href="">기상자료 데이터 포털</a>
 											<ul class="sitemap-d3">
-												<li><a href="">조건별통계</a></li>
-												<li><a href="">기온분석</a></li>
-												<li><a href="">강수량분석</a></li>
-												<li><a href="">다중지점통계</a></li>
-												<li><a href="">전운량 계급별일수</a></li>
-												<li><a href="">강수 계급별일수</a></li>
-												<li><a href="">바람장미</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
+												<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
 												</ul>
 											</li>
 									</ul>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="">기상현상일수</a>
+										<li class="has-child"><a href="">공모전/데이터</a>
 											<ul class="sitemap-d3">
-												<li><a href="">강수일수</a></li>
-												<li><a href="">황사일수</a></li>
-												<li><a href="">폭염일수</a></li>
-												<li><a href="">열대야일수</a></li>
-												<li><a href="">24절기</a></li>
-												<li><a href="">순위값</a></li>
-												<li><a href="">장마</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/climate/windChill/selectWindChillChart.do&#39;,&#39;111&#39;);return false;">응용기상분석</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/climate/windChill/selectWindChillChart.do&#39;,&#39;111&#39;);return false;">체감온도</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/climate/ehum/selectEhumChart.do&#39;,&#39;110&#39;);return false;">실효습도</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/climate/heatIndex/selectHeatIndexChart.do&#39;,&#39;101&#39;);return false;">열지수</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/climate/degreeDay/selectDegreeDayChart.do&#39;,&#39;99&#39;);return false;">냉/난방도일</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/climate/sot/selectSotChart.do&#39;,&#39;100&#39;);return false;">적산온도</a></li>
+												<li><a href="https://dacon.io/">데이콘</a></li>
+												<li><a href="https://www.kaggle.com/">Kaggle</a></li>
+												<li><a href="https://www.wevity.com/">WEVITY</a></li>
+												<li><a href="https://www.all-con.co.kr/">allcontest</a></li>
+												<li><a href="https://www.thinkcontest.com/">씽굿</a></li>
 												</ul>
 											</li>
 									</ul>
 									</li>
 							</ul>
 							<ul class="sitemap-d1 s3">
-								<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationAsosList.do&#39;,&#39;143&#39;);return false;">간행물</a>
+								<li><a href="mysql사이트주소">MYSQL</a>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationAsosList.do&#39;,&#39;143&#39;);return false;">지상</a>
+										<li class="has-child"><a href="">전처리 데이터</a>
 											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationAsosList.do&#39;,&#39;143&#39;);return false;">지상</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationAwsList.do&#39;,&#39;145&#39;);return false;">방재</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationAgList.do&#39;,&#39;146&#39;);return false;">농업</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationNkList.do&#39;,&#39;566&#39;);return false;">북한</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">대한민국 해양 오염정도</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">쓰레기 수거업체 일일수거량</a></li>
 												</ul>
 											</li>
 									</ul>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">해양</a>
+										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">DB조회</a>
 											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">해양</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">DB조회 방법</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">DB조회 페이지</a></li>
 												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationTmList.do&#39;,&#39;147&#39;);return false;">고층</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationTmList.do&#39;,&#39;147&#39;);return false;">고층</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://radar.kma.go.kr/notification/pds/publish/index.do&#39;,&#39;149&#39;);return false;">레이더</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://radar.kma.go.kr/notification/pds/publish/index.do&#39;,&#39;149&#39;);return false;">낙뢰연보</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://web.kma.go.kr/communication/webzine/earthquakeyearly.jsp&#39;,&#39;150&#39;);return false;">지진</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://web.kma.go.kr/communication/webzine/earthquakeyearly.jsp&#39;,&#39;150&#39;);return false;">지진연보</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://amo.kma.go.kr/new/html/news/news08.jsp?field=subject&amp;text=%EA%B3%B5%ED%95%AD%EA%B8%B0%ED%9B%84%EC%9E%90%EB%A3%8C&amp;x=0&amp;y=0&#39;,&#39;152&#39;);return false;">항공</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationMetList.do&#39;,&#39;682&#39;);return false;">항공기상연월보</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://amo.kma.go.kr/new/html/news/news08.jsp?field=subject&amp;text=%EA%B3%B5%ED%95%AD%EA%B8%B0%ED%9B%84%EC%9E%90%EB%A3%8C&amp;x=0&amp;y=0&#39;,&#39;152&#39;);return false;">공항기후자료집</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://www.climate.go.kr/home/bbs/list.php?code=24&amp;bname=report&amp;skind=subject&amp;sword=%C1%F6%B1%B8%B4%EB%B1%E2%B0%A8%BD%C3%BA%B8%B0%ED%BC%AD&#39;,&#39;151&#39;);return false;">기후변화</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://www.climate.go.kr/home/bbs/list.php?code=24&amp;bname=report&amp;skind=subject&amp;sword=%C1%F6%B1%B8%B4%EB%B1%E2%B0%A8%BD%C3%BA%B8%B0%ED%BC%AD&#39;,&#39;151&#39;);return false;">지구대기감시보고서</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;http://www.climate.go.kr/home/bbs/list.php?code=93&amp;bname=abnormal&#39;,&#39;154&#39;);return false;">이상기후보고서</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationWbList.do&#39;,&#39;155&#39;);return false;">백서</a>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationGlList.do&#39;,&#39;681&#39;);return false;">규정·지침</a>
 											</li>
 									</ul>
 									</li>
 							</ul>
 							<ul class="sitemap-d1 s4">
-								<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/community/board/selectBoardList.do?bbrdTypeNo=2&#39;,&#39;40&#39;);return false;">소통과참여</a>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/community/board/selectBoardList.do?bbrdTypeNo=2&#39;,&#39;40&#39;);return false;">공지사항</a>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/community/board/selectBoardList.do?bbrdTypeNo=7&#39;,&#39;59&#39;);return false;">자유게시판</a>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/community/board/selectBoardList.do?bbrdTypeNo=4&#39;,&#39;92&#39;);return false;">자료실</a>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/community/board/selectBoardList.do?bbrdTypeNo=3&#39;,&#39;95&#39;);return false;">FAQ</a>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/community/board/selectBoardList.do?bbrdTypeNo=1&#39;,&#39;96&#39;);return false;">QnA</a>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class=""><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/community/selectErrorDataList.do&#39;,&#39;141&#39;);return false;">데이터품질대화방</a>
-											</li>
-									</ul>
-									</li>
-							</ul>
+								<li><a href="https://aminoragit.github.io/websitegroupc/index.html">C조소개</a>
+									</li></ul>
 							</div>
 					</div>	
 				</div>
@@ -585,8 +509,7 @@ function favoritePopup(){
 		</div>
 	</div>
 	<!-- //gnb -->	
-	<!-- //gnb -->	
-<!-- End:Header Area -->
+
 		<div id="container">
 		<!-- Start:Left Area -->
 		<script type="text/javascript">
