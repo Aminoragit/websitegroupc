@@ -120,118 +120,7 @@ $(document).ready(function () {
 		addFontSizeToFormOnsubmit($(this).attr("id"));
 	});
 	
-	// 로그인
-	$("#loginBtn").on('click', function(e){
-		e.preventDefault();
-		loginPopup("Y");
-	});
-	
-	// 로그아웃
-	$("#logoutBtn").on('click', function(e){
-		e.preventDefault();
-		$("#loginYn").val("N");
-		$("#topForm").attr("method", "post");
-		$("#topForm").attr("action", $(this).attr('href')).submit();
-	});
-	
-	// 회원가입
-	$("#memberJoinBtn, #mypageBtn, #siteMapBtn").on('click', function(e){
-		e.preventDefault();
-		$("#topForm").attr("method", "post");
-		$("#topForm").attr("action", $(this).attr('href')).submit();
-	});
-	
-	//즐겨찾기
-	$("#favBtn").on('click', function(e){
-		e.preventDefault();
-		favoritePopup();
-	});
-	
-	loginSessionChk();
-	
-	$("input[name=dataSearch]").on("keypress", function(e){
-		
-		var kcode= (e.keyCode ? e.keyCode : e.which);
-		if (kcode == 13){
-			var dataSch = $("#dataSearch").val();
-			
-			if (dataSch.length < 2){
-				Message.alert('검색어는 최소 2자 이상 입력해주세요');
-				return false;
-			}	
-			
-			goSearchResult();			
-		}
-		
-		//return false;
-	});
-});
-
 var GDSsessionExpireTime;
-var isLogin = false;
-
-function loginSessionChk(){
-	if(isLogin){
-		if(GDSsessionExpireTime == undefined ){
-			GDSsessionExpireTime = new Date().getTime() + 10*60*1000;
-		}
-		if(GDSsessionExpireTime != undefined && GDSsessionExpireTime != ''){
-			var currentTimeMillis = new Date().getTime();
-			if(GDSsessionExpireTime < currentTimeMillis){
-				Message.alert('로그아웃 되었습니다.');
-				GDSsessionExpireTime = undefined;
-				window.location.href='/login/logout.do';
-			}
-		}
-		setTimeout('loginSessionChk()', 10000);
-	}
-}
-
-function loginPopup(reloadYn){
-	$("#wrap-datapop").show();
-}
-
-function changeLayOut(loginYN){
-	$("#loginYn").val(loginYN);
-	if(loginYN == "Y"){
-		$("#myPage").show();
-		$("#join").hide();
-		$("#login").hide();
-		$("#logout").show();
-		$(".LOGIN_AREA").hide();
-	}else{
-		$("#myPage").hide();
-		$("#join").show();
-		$("#login").show();
-		$("#logout").hide();
-		$(".LOGIN_AREA").show();
-	}
-	
-	checkLoginStatus();
-	
-	if(moveURLFlag){
-		location.href = moveURL;
-	}
-}
-
-//로그인 상태 체크
-function checkLoginStatus(){
-	//nothing to do
-	//삭제 금지..
-}
-
-function goSearchResult(){
-	
-	var dataSch = $("#dataSearch").val();
-	
-	if (dataSch.length < 2){
-		Message.alert('검색어는 최소 2자 이상 입력해주세요');
-		return false;
-	}	
-	
-	$("#searchForm").attr("method", "post");
-	$("#searchForm").attr("action", $(this).attr('href')).submit();
-}
 
 </script>	
 <script type="text/javascript">
@@ -489,10 +378,10 @@ function favoritePopup(){
 											</li>
 									</ul>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">DB조회</a>
+										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회</a>
 											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">DB조회 방법</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" onclick="javascript:goMenuPage(&#39;/data/publication/publicationSeList.do&#39;,&#39;148&#39;);return false;">DB조회 페이지</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회 방법</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" >DB조회 페이지</a></li>
 												</ul>
 											</li>
 									</ul>
@@ -508,7 +397,6 @@ function favoritePopup(){
 			</div>
 		</div>
 	</div>
-	<!-- //gnb -->	
 	<!-- //gnb -->	
 		
 <!-- End:Header Area -->
