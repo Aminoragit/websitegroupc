@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="./index_files/css/sub.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/main.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/layout.css" media="all">
+
 <script type="text/javascript" src="./index_files/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./index_files/js/ddlist.jquery.min.js"></script>
 <script type="text/javascript" src="./index_files/js/common.js"></script>
@@ -30,6 +31,9 @@
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
+
+
+
 </head>
 	<body class="">
 	<div id="mwrap">
@@ -37,7 +41,7 @@
 		<dl class="logo_box">
 			<dt>
 				<h1 class="logo">
-					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./index_files/image/icon.jpg" alt="C조 홈페이지" width="50" height="50" style="
+					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./index_files/image/icon.jpg" alt="기상청 기상자료개방포털" width="50" height="50" style="
     width: 30px;
     height: 30px;
 "></a>
@@ -47,7 +51,36 @@
 		</dl>
 	</div>
 		<!-- Start:Top Area -->
+		<script type="text/javascript">
+		var moveURLFlag = false;
+		var moveURL = '';
+		$(document).ready(function () {
+			/* 폰트 변경 및 form submit 시 fontSize 파라미터 추가. custom.js 에..... */
+			changeFontSize();
+			$("form").each(function(){
+				addFontSizeToFormOnsubmit($(this).attr("id"));
+			});
 	
+		var GDSsessionExpireTime;
+
+		</script>	
+
+
+		<script type="text/javascript">
+	$(document).ready(function () {
+		
+		$(".sitemap-d2 li").mouseover(function(){
+			$(this).find(".sitemap-d3").show();
+			$(this).addClass("on");
+		});
+		
+		$(".sitemap-d2 li").mouseout(function(){
+			$(this).find(".sitemap-d3").hide();
+			$(this).removeClass("on");
+		});	
+	});
+</script>
+
 	
 	<!-- header -->
 	<div id="header" class="main-header">
@@ -133,7 +166,7 @@
 							</dt>
 							<dd>
 								<ul>
-									<li class="sub2_2_1"><a href="https://data.kma.go.kr/cmmn/main.do;jsessionid=WktpBl6T2InLSqfI8Ue9dFPg406qdnOPOEdFBeibhBjv9Thj4N2KgVuOImbALcR3.was02_servlet_engine5">기상청 기상자료데이터</a></li>
+									<li class="sub2_2_1"><a href="https://data.kma.go.kr/">기상청 기상자료데이터</a></li>
 									<li class="sub2_2_2"><a href="https://bd.kma.go.kr/kma2019/svc/main.do" >날씨마루</a></li>
 									</ul>									
 							</dd>
@@ -154,7 +187,7 @@
 					</div>
 				</li>
 										
-				<li class=""><a href="MySQL사이트 주소">MySQL</a>
+				<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">MySQL</a>
 					<div class="mgnbs-div">
 						<div class="mgnbs-div2">
 							<dl style="height: 150px;width: 250px;">
@@ -227,7 +260,7 @@
 									<ul class="sitemap-d2">
 										<li class="has-child"><a href="">기상자료 데이터 포털</a>
 											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/main.do;jsessionid=WktpBl6T2InLSqfI8Ue9dFPg406qdnOPOEdFBeibhBjv9Thj4N2KgVuOImbALcR3.was02_servlet_engine5">기상청자료개방</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
 												<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
 												</ul>
 											</li>
@@ -250,16 +283,16 @@
 									<ul class="sitemap-d2">
 										<li class="has-child"><a href="">전처리 데이터</a>
 											<ul class="sitemap-d3">
-												<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html#">대한민국 해양 오염정도</a></li>
-												<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html#">쓰레기 수거업체 일일수거량</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">대한민국 해양 오염정도</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">쓰레기 수거업체 일일수거량</a></li>
 												</ul>
 											</li>
 									</ul>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">DB조회</a>
+										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회</a>
 											<ul class="sitemap-d3">
-												<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html#">DB조회 방법</a></li>
-												<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html#" >DB조회 페이지</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회 방법</a></li>
+												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" >DB조회 페이지</a></li>
 												</ul>
 											</li>
 									</ul>
@@ -284,53 +317,49 @@
 			<div class="lnb-wrap">
 				<div class="lnb-top">
 					<h3 class="lnb-title1">
-						<span class="data_tit1">머신러닝/딥러닝</span>
+						<span class="data_tit1">MySQL</span>
 
 							</h3>
 					<ul id="leftMenuUi" class="lnbs">
 					<li class="has-child">							
-								<a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">
-									<span>머신러닝</span>
+								<a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">
+									<span>전처리 데이터</span>
 
 								
 								</a>
-								<ul class="lnb_list1">
-									<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝:/ RNN</a></li>
-									<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝:/ RNN</a></li>
-									<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝:/ RNN</a></li>
-									<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝:/ RNN</a></li>
-									<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝:/ RNN</a></li>
-																	</ul>
-															</li>																												
+								<ul class="lnb_list1" style="width: 260px;">
+									<li><a href="주소입력">대한민국 해양 오염정도</a></li>
+									<li><a href="주소입력">쓰레기 수거업체 일일 수거량</a></li>
+								</ul>
+					</li>																												
 								</li>
 							<li class="has-child">							
-								<a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">
-									<span>딥러닝</span>
+								<a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">
+									<span>DB 조회</span>
 								</a>
 								<ul class="lnb_list1">
-										<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">딥러닝:/ Dense</a></li>								
-										<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">딥러닝:/ LSTM</a></li>	
+										<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">DB 조회 방법</a></li>								
+										<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">DB 조회페이지</a></li>	
 								</ul>
 							</li>
 						</ul>
 				</div>
 			</div>
 		</div>
-
-		<div id="content" class="sub">
+	<div id="content" class="sub">
 	<div class="breadcrumb">
 	
 </div>
-<div class="content-head" style="
-    margin-left: 250px;
-">
-	<h2>머신러닝:/ 지도학습(RNN)</h2>
-
+<div class="content-head" style="margin-left: 250px;">
+	<h2>DB 조회방법</h2>
 </div>
 		</div>
 
 	<div id="content2" class="sub2">
 	<p> content2 div입니다. 해당 위치에 원하는 사이트/이미지/PHP를 올려주세요</p>
+	<iframe src="http://groupc.dothome.co.kr/datatable.php" frameborder="0" style="width: 100%;border: 2px solid #ccc; height:100%;" scrolling="yes" onload="autoResize(this)" id="myIframe">
+
+</iframe>
 
 	</div></div></div><div class="clear">
 </div>
