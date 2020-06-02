@@ -17,27 +17,6 @@
 <link rel="stylesheet" type="text/css" href="./html/index_files/css/sub.css" media="all">
 <link rel="stylesheet" type="text/css" href="./html/index_files/css/main.css" media="all">
 <link rel="stylesheet" type="text/css" href="./html/index_files/css/layout.css" media="all">
-
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(1)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(2)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(3)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(4)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(5)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(6)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(7)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(8)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(9)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(10)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(11)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(12)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(13)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(14)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(15)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(16)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(17)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(18)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(19)"></script>
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(20)"></script>
 <script type="text/javascript" src="./html/index_files/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./html/index_files/js/ddlist.jquery.min.js"></script>
 <script type="text/javascript" src="./html/index_files/js/common.js"></script>
@@ -116,64 +95,7 @@ $(function(){
 		
 		</dl>
 	</div>
-		<!-- Start:Top Area -->
-		<script type="text/javascript">
-var moveURLFlag = false;
-var moveURL = '';
-$(document).ready(function () {
-	/* 폰트 변경 및 form submit 시 fontSize 파라미터 추가. custom.js 에..... */
-	changeFontSize();
-	$("form").each(function(){
-		addFontSizeToFormOnsubmit($(this).attr("id"));
-	});
-	
-var GDSsessionExpireTime;
 
-</script>	
-<script type="text/javascript">
-function favoritePopup(){
-	$("#divPopupFavorite").remove();
-	
-	$.ajax({
-		type: 'post',
-		url: "/cmmn/myFavoriteLayerPopup.do;jsessionid=eLASVS5105ydHa1nVcL4kWGj9tmQacqO32oSgaabCXWmJcKf4tbynlyU0QSbWgaV.was02_servlet_engine5",
-		dataType : "html",
-		success: function(data) {
-
-			var pop = $('<div id="divPopupFavorite">'+data+'</div>');
-			$('body').append($(pop).clone());
-						
-			$(".favorite-pop").show();
-			
-			var loginYN = $("#loginYn").val();
-			if(loginYN === 'Y' || 'N' === 'Y'){
-				$("#myMenu").show();
-			} else {
-				$("#info").show();
-			}
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-			Message.alert(textStatus);
-			return false;			
-		}
-	});
-		
-}
-</script>
-		<script type="text/javascript">
-	$(document).ready(function () {
-		
-		$(".sitemap-d2 li").mouseover(function(){
-			$(this).find(".sitemap-d3").show();
-			$(this).addClass("on");
-		});
-		
-		$(".sitemap-d2 li").mouseout(function(){
-			$(this).find(".sitemap-d3").hide();
-			$(this).removeClass("on");
-		});	
-	});
-</script>
 
 	
 	<!-- header -->
@@ -220,7 +142,7 @@ function favoritePopup(){
 							</dt>
 							<dd>
 								<ul>
-									<li class="sub1_1_1"><a href="http://192.168.0.159:5000/">RNN</a></li>
+									<li class="sub1_1_1"><a href="http://192.168.0.159:5000/pre_1">RNN</a></li>
 									<li class="sub1_1_2"><a href="주소입력1_1">CNN</a></li>
 									<li class="sub1_1_3"><a href="주소입력1_2">고층</a></li>
 									<li class="sub1_1_4"><a href="주소입력1_3">항공</a></li>
