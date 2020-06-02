@@ -499,9 +499,9 @@ caption.caption-title{display:block;visibility:visible;overflow:visible;width:20
 .sitemap-d2 > li{padding-left:10px;border-bottom:1px solid #ccc;line-height:42px}
 .sitemap-d2 > li a:hover,.sitemap-d2 > li a:focus{color:#4780bc}
 .sitemap-d2 > li:last-child{border-bottom:1px solid #d0d0d0}
-.sitemap-d2 > li.has-child{background:url(../images/common/ico_plus.gif) 97% 14px no-repeat}
+.sitemap-d2 > li.has-child{background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/ico_plus.gif?raw=true) 97% 14px no-repeat}
 .sitemap-d2 > li.has-child ul{display:none}
-.sitemap-d2 > li.has-child.on{display:block;background:url(../images/common/ico_minus.gif) 97% 14px no-repeat}
+.sitemap-d2 > li.has-child.on{display:block;background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/ico_minus.gif?raw=true) 97% 14px no-repeat}
 .sitemap-d2 > li.has-child.on ul{display:block}
 .sitemap-d2 > li > a{display:block;height:37px;font-size:14px;color:#4e4e4e}
 .sitemap-d3 > li > a{padding-left:20px;font-size:14px;line-height:23px; display:block;}
@@ -979,9 +979,9 @@ span.fc-title {font-size:11px !important; display:block; text-align:center; padd
 
 .m-menu-d1 {text-align:left; overflow:hidden; border-bottom:1px solid #ccc;}
 .m-menu-d1 > li > a{display:block; padding-left:5px; height:40px; font-size:26px; color:#4e4e4e;}
-.m-menu-d1 > li.has-child{background:url(../images/common/ico_plus.gif) 97% 12px no-repeat}
+.m-menu-d1 > li.has-child{background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/ico_plus.gif?raw=true) 97% 12px no-repeat}
 .m-menu-d1 > li.has-child ul{display:none}
-.m-menu-d1 > li.has-child.on{display:block;background:url(../images/common/ico_minus.gif) 97% 10px no-repeat}
+.m-menu-d1 > li.has-child.on{display:block;background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/ico_minus.gif?raw=true) 97% 10px no-repeat}
 .m-menu-d2 {text-align:left;}
 .m-menu-d2 >li > a{display:block; padding-left:15px; font-size: 20px;}
 

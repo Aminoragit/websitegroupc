@@ -92,7 +92,7 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .mgnbs > li:nth-child(4) .gnbs-div > dl + dl + dl + dl + dl + dl + dl + dl + dl {height:25px;}
 .mgnbs-div > dl:first-child, .mgnbs-div > dl:nth-child(5), .mgnbs-div > dl:nth-child(9) {border-left:0px;} 
 .mgnbs-div > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
-.mgnbs-div > dl dt {font-weight:bold;font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px; margin-bottom:5px}
+.mgnbs-div > dl dt {font-weight:bold;font-size:16px;background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/garrow.png?raw=true) left 50% no-repeat; padding-left:10px; margin-bottom:5px}
 .mgnbs-div > dl dd ul li {text-align:left; margin-bottom:3px;}
 .mgnbs-div > dl dd ul li a {color:#4e4e4e;}
 .mgnbs-div > dl dd ul li:before {content:' -'; padding-left:10px;}
@@ -101,7 +101,7 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .mgnbs-div > ul li a.on,.mgnb > li > div > ul li a:hover,.mgnb > li > div > ul li a:focus{color:#F0691F}
 .mgnbs-div2 {float:left; width:800px;}
 .mgnbs-div2 > dl {float:left; width:150px; height:80px; margin-left:20px; border-left:solid 1px #ededed; padding-left:20px;}
-.mgnbs-div2 > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
+.mgnbs-div2 > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/garrow.png?raw=true) left 50% no-repeat; padding-left:10px;}
 .mgnbs-div2 > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
 .mgnbs-div2 > dl dd ul li {text-align:left;}
 .mgnbs-div2 > dl dd ul li:before {content:'-'; padding-left:15px;}
@@ -146,7 +146,7 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .gnbs-div > dl:first-child, .gnbs-div > dl:nth-child(5), .gnbs-div > dl:nth-child(9) {border-left:0px;} 
 .gnbs-div > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;}
 .gnbs-div > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
-.gnbs-div > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
+.gnbs-div > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/garrow.png?raw=true) left 50% no-repeat; padding-left:10px;}
 .gnbs-div > dl dd ul li {text-align:left; margin-bottom:2px;}
 .gnbs-div > dl dd ul li a {color:#4e4e4e;}
 .gnbs-div > dl dd ul li:before {content:'-'; padding-left:15px;}
@@ -159,7 +159,7 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .gnbs-div2 {float:left; width:800px;}
 .gnbs-div2 > dl {float:left; width:150px; height:80px; margin-left:20px; border-left:solid 1px #ededed; padding-left:20px;}
 .gnbs-div2 > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;}
-.gnbs-div2 > dl dt {font-weight:bold;text-align:left;font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
+.gnbs-div2 > dl dt {font-weight:bold;text-align:left;font-size:16px;background:url(https://github.com/Aminoragit/websitegroupc/blob/master/html/index_files/image/garrow.png?raw=true) left 50% no-repeat; padding-left:10px;}
 .gnbs-div2 > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
 .gnbs-div2 > dl dd ul li {text-align:left;}
 .gnbs-div2 > dl dd ul li:before {content:'-'; padding-left:15px;}
