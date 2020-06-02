@@ -92,7 +92,7 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .mgnbs > li:nth-child(4) .gnbs-div > dl + dl + dl + dl + dl + dl + dl + dl + dl {height:25px;}
 .mgnbs-div > dl:first-child, .mgnbs-div > dl:nth-child(5), .mgnbs-div > dl:nth-child(9) {border-left:0px;} 
 .mgnbs-div > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
-.mgnbs-div > dl dt {font-weight:bold;font-size:16px;background:url(./websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px; margin-bottom:5px}
+.mgnbs-div > dl dt {font-weight:bold;font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px; margin-bottom:5px}
 .mgnbs-div > dl dd ul li {text-align:left; margin-bottom:3px;}
 .mgnbs-div > dl dd ul li a {color:#4e4e4e;}
 .mgnbs-div > dl dd ul li:before {content:' -'; padding-left:10px;}
@@ -101,7 +101,7 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .mgnbs-div > ul li a.on,.mgnb > li > div > ul li a:hover,.mgnb > li > div > ul li a:focus{color:#F0691F}
 .mgnbs-div2 {float:left; width:800px;}
 .mgnbs-div2 > dl {float:left; width:150px; height:80px; margin-left:20px; border-left:solid 1px #ededed; padding-left:20px;}
-.mgnbs-div2 > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(./websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
+.mgnbs-div2 > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
 .mgnbs-div2 > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
 .mgnbs-div2 > dl dd ul li {text-align:left;}
 .mgnbs-div2 > dl dd ul li:before {content:'-'; padding-left:15px;}
@@ -112,12 +112,6 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .mheader_wrap {width:1070px; margin:0 auto;}
 
 
-/* .gnbs-area{width:1070px;height:50px;margin:0 auto;padding:0; position:relative;}
-.gnbs-area .top_section{float:left;position:relative;width:266px;height:50px}
-.gnbs-area .logo{position:absolute;top:0px;left:0;width:266px;height:50px}
-.gnbs-area .logo img{width:100%;height:100%}
- */
- 
 /* GNB wrap */
 .gnb-wrap {width:100%; border-bottom:solid 1px #3e3e3e;}
  
@@ -152,7 +146,7 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .gnbs-div > dl:first-child, .gnbs-div > dl:nth-child(5), .gnbs-div > dl:nth-child(9) {border-left:0px;} 
 .gnbs-div > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;}
 .gnbs-div > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
-.gnbs-div > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(./websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
+.gnbs-div > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
 .gnbs-div > dl dd ul li {text-align:left; margin-bottom:2px;}
 .gnbs-div > dl dd ul li a {color:#4e4e4e;}
 .gnbs-div > dl dd ul li:before {content:'-'; padding-left:15px;}
@@ -165,50 +159,14 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .gnbs-div2 {float:left; width:800px;}
 .gnbs-div2 > dl {float:left; width:150px; height:80px; margin-left:20px; border-left:solid 1px #ededed; padding-left:20px;}
 .gnbs-div2 > dl dt {font-weight:bold;text-align:left; margin-bottom:5px; font-size:16px;}
-.gnbs-div2 > dl dt {font-weight:bold;text-align:left;font-size:16px;background:url(./websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
+.gnbs-div2 > dl dt {font-weight:bold;text-align:left;font-size:16px;background:url(https://aminoragit.github.io/websitegroupc/html/index_files/image/garrow.png) left 50% no-repeat; padding-left:10px;}
 .gnbs-div2 > dl dt a:hover {text-decoration:underline; color:#2c70a2; font-weight:bold;}
 .gnbs-div2 > dl dd ul li {text-align:left;}
 .gnbs-div2 > dl dd ul li:before {content:'-'; padding-left:15px;}
 .gnbs-div2 > dl dd ul li a:hover {line-height:20px; text-decoration:underline; color:#2c70a2; font-weight:bold;}
 .gnb_bgs {visibility: visible; opacity: 1; background-color:rgba(0, 0, 0, 0.5); width:100%; height:100%; position:fixed; top:0px; left:0px; z-index:1;}
 .sitemap-d3 ul li {text-align:left;}
-/* ======================================================================GNB */
 
-
-
-/* GNB wrap */
-/* .gnb-area{width:1070px;height:65px;margin:0 auto;padding:0}
-.gnb-area .top_section{float:left;position:relative;width:266px;height:65px}
-.gnb-area .logo{position:absolute;top:0px;left:0;width:266px;height:65px}
-.gnb-area .logo img{width:100%;height:100%}
-.top-section-banner{float:right;width:90px;height:47px;margin:10px 0 0}
-.top-section-banner img{width:100%;height:auto}
- */
-/* GNB */
-/* #gnb{display:block;float:left;height:69px;margin:0;background:none;text-align:right}
-.gnb{position:static;top:0;right:0;width:auto;height:100%;padding:0;background:none;color:#fff}
-.gnb:after{display:block;clear:both;content:' '}
-.gnb{height:69px;margin:0;padding:0}
-.gnb li a{text-align:left}
-.gnb ul:after{clear:both;clear:both;content:' '}
-.gnb > li{display:inline-block}
-.gnb > li > a{display:inline-block;height:47px;margin:0 -3px;padding:11px 23px;font-size:20px;font-weight:600;line-height:47px;color:#525252;text-align:center}
-.gnb > li.on > a,.gnb > li > a:hover,.gnb > li > div > a:focus{color:#f26c21}
-.gnb-main-div{position:absolute;top:304px;left:0;z-index:40;width:100%;margin:0;padding:14px 0;border:1px solid #f26c21;background:#fff;opacity:0;visibility: hidden;transition: opacity 0.3s ease; text-align: left;}
-.gnb-div{position:absolute;top:130px;left:0;z-index:40;width:100%;margin:0;padding:14px 0;border:1px solid #f26c21;background:#fff;opacity:0;visibility: hidden;transition: opacity 0.3s ease; text-align: left;}
-.gnbs li:first-child.__open > a {background:none; color:#1a325b}
-.gnbs li:last-child.__open > a {background:none; color:#1a325b}
-.gnbs > li.__open > a {background:#38414a;color:#fff;}
-.__open .gnb-main-div, .__open .gnb-div{visibility: visible; opacity: 1}
-.gnb-main-div > ul li.sub1_1, .gnb-div > ul li.sub1_1{width:200px;margin-bottom:3px;padding:0;vertical-align:top}
-.gnb-main-div > ul li.sub1_1 > a, .gnb-div > ul li.sub1_1 > a{display:block;padding:4px 15px 4px 12px;line-height:17px;font-size:14px;font-weight:normal;color:#1a325b}
-.gnb-main-div > ul li.sub1_1 a.on, .gnb-div > ul li.sub1_1 a.on,.gnb > li > div > ul li a:hover,.gnb > li > div > ul li a:focus{color:#F0691F}
-.gnb-main-div > div, .gnb-div > div {display:inline-block; padding:4px 15px 4px 12px; vertical-align: top;}
-.gnb-main-div > div > div, .gnb-div > div > div {background-color: blue; width:160px; color:white; margin: 0 0 10px 0;}
- */
- 
- 
- 
 /* LNB */
 .lnb-top {width:auto;height:100%;padding:0;}
 .lnb-top:after {display:block;clear:both;content:' '}
