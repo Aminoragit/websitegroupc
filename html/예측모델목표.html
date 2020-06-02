@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <!-- saved from url=(0056)file:///C:/Users/TJOEUN-JR/Desktop/machine_learning.html -->
-<html lang="ko-KR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="ko-KR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>BAWS(Bigdata Analytics Web Service)</title>
-
-
 <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0">
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="shortcut icon" href="./index_files/image/icon.jpg">
 <link rel="stylesheet" type="text/css" href="./index_files/css/common.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/font-awesome.min.css" media="all">
@@ -33,10 +32,10 @@
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
-
-
 </head>
 	<body class="">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>AOS.init();</script>
 	<div id="mwrap">
 		<div class="top_area">
 		<dl class="logo_box">
@@ -114,6 +113,7 @@ function favoritePopup(){
 	<!-- header -->
 	<div id="header" class="main-header">
 		<div class="mheader_wrap">
+
 <div class="msearch-area" style="
     padding-top: 50px;
 ">
@@ -356,7 +356,7 @@ function favoritePopup(){
 ">
 			<div><div class="intro_container"><!-- 콘트롤타워 -->
 <div class="intro_box1">
-<div class="intro_wrap1">
+<div class="intro_wrap1" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">
 <dl class="intro_cont1">
 	<dt><img alt="국가기후자료의 통합관리 서비스 콘트롤타워" src="./index_files/image/intro_cotit1.png" style="
     border-top-width: 80px;
@@ -406,9 +406,14 @@ function favoritePopup(){
 <div class="ints_wraps1"><!-- 자료관리 -->
 <div class="intro_box2">
 <div class="intro_wrap2">
-<h4 class="int_titl1"><span class="fn_titl1">폐기물과 수질오염 상관관계 예측</span></h4>
+<h4 class="int_titl1" style="
+    margin-right: 0px;
+    margin-left: 120px;
+    width: 300px;
+    margin-bottom: 0px;
+"><span class="fn_titl1">폐기물과 수질오염 상관관계 예측</span></h4>
 
-<div class="int_cont2"><img alt="자료관리" src="./index_files/image/intro_grp1.png"></div>
+<div class="int_cont2"><img alt="자료관리" src="./index_files/image/intro_grp1.png" style="width: 500px;height: 500px;"></div>
 </div>
 </div>
 <!-- //// 자료관리 --><!-- 주요업무 -->
@@ -449,15 +454,14 @@ function favoritePopup(){
 
 <div class="intro_box4">
 <div class="intro_wrap4">
-<h4 class="int_titl2"><span class="fn_titl1"></span><span class="btt_line"> </span></h4>
-
+<hr>
 <h6><strong>더 조은 아카데미</strong></h6>
 <p>&nbsp;</p>
 <dl>
 	<dt><ins>주소 안내</ins></dt>
 	<dd>
 	<ul>
-		<li>서울특별시 종로구 삼일대로 385-1, 동일빌딩 5층(관철동)</li>
+		<li><a href="https://map.naver.com/v5/search?c=14136207.4297446,4518771.7673551,19,0,0,0,dh">서울특별시 종로구 삼일대로 385-1, 동일빌딩 5층(관철동)</a></li>
 	</ul>
 	</dd>
 </dl>
@@ -468,8 +472,8 @@ function favoritePopup(){
 	<dt><ins>지하철 이용안내</ins></dt>
 	<dd>
 	<ul>
-		<li class="green">1호선 종각역 12번출구</li>
-		<li class="green">3호선 종로3가역 15번출구</li>
+		<li class="green"><a href="https://map.naver.com/v5/search/3%ED%98%B8%EC%84%A0%20%EC%A2%85%EA%B0%81%EC%97%AD/place/21406517?c=14135987.5239972,4518794.3849524,17,0,0,0,dh">1호선 종각역 4번출구</a></li>
+		<li class="green"><a href="https://map.naver.com/v5/search/3%ED%98%B8%EC%84%A0%20%EC%A2%85%EA%B0%81%EC%97%AD/place/21405265?c=14136366.7233172,4518831.4091379,17,0,0,0,dh">1,3호선 종로3가역 15번출구</a></li>
 	</ul>
 	</dd>
 </dl>
@@ -480,7 +484,7 @@ function favoritePopup(){
 	<dt><ins>버스 이용안내</ins></dt>
 	<dd>
 	<ul>
-		<li>종로2가 사거리 - 470번,741번,N37번,5007번</li>
+		<li><a href="https://map.naver.com/v5/entry/bus-station/104996?c=14136207.4297446,4518771.7673551,19,0,0,0,dh">종로2가 사거리 - 470번,741번,N37번,5007번</a></li>
 	</ul>
 	</dd>
 </dl>
@@ -495,7 +499,5 @@ function favoritePopup(){
 		<div class="clear">
 </div>
 
-	<iframe width="0" height="0" id="hiddenFrame" name="hiddenFrame" style="display: none;" title="다운로드 사용 용도" src="./index_files/saved_resource.html"></iframe>
-	<div id="loading-mask"><img id="mask_loding_image_bar" src="./index_files/loader.gif" alt="loading..."></div>
 </div>
 </body></html>
