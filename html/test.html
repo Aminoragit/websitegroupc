@@ -51,18 +51,21 @@
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
-<style type="text/css">
-#loading-mask {
-    position:absolute;
-    top:0;
-    left:0;
-    background-color:#ffffff;
-    opacity:0.80;
-    filter:alpha(opacity=80);
-    z-index:30000;
-    display:none;
+
+<script type="text/javascript">
+
+// iframe resize
+
+function autoResize(i)
+
+{
+    var iframeHeight=
+    (i).contentWindow.document.body.scrollHeight;
+    (i).height=iframeHeight+20;
+
 }
-</style>
+</script>
+
 
 <script type="text/javascript">
 $(function(){  
@@ -72,7 +75,12 @@ $(function(){
 }); 
 
 </script>
-
+<style type="text/css">
+	.sub2{
+   overflow: auto;
+   height: 983px;
+}
+</style>
 <!-- Matomo -->
 <script type="text/javascript">
   var _paq = window._paq || [];
@@ -106,48 +114,20 @@ $(function(){
 	</div>
 		<!-- Start:Top Area -->
 		<script type="text/javascript">
-var moveURLFlag = false;
-var moveURL = '';
-$(document).ready(function () {
-	/* 폰트 변경 및 form submit 시 fontSize 파라미터 추가. custom.js 에..... */
-	changeFontSize();
-	$("form").each(function(){
-		addFontSizeToFormOnsubmit($(this).attr("id"));
-	});
+		var moveURLFlag = false;
+		var moveURL = '';
+		$(document).ready(function () {
+			/* 폰트 변경 및 form submit 시 fontSize 파라미터 추가. custom.js 에..... */
+			changeFontSize();
+			$("form").each(function(){
+				addFontSizeToFormOnsubmit($(this).attr("id"));
+			});
 	
-var GDSsessionExpireTime;
+		var GDSsessionExpireTime;
 
-</script>	
-<script type="text/javascript">
-function favoritePopup(){
-	$("#divPopupFavorite").remove();
-	
-	$.ajax({
-		type: 'post',
-		url: "/cmmn/myFavoriteLayerPopup.do;jsessionid=eLASVS5105ydHa1nVcL4kWGj9tmQacqO32oSgaabCXWmJcKf4tbynlyU0QSbWgaV.was02_servlet_engine5",
-		dataType : "html",
-		success: function(data) {
+		</script>	
 
-			var pop = $('<div id="divPopupFavorite">'+data+'</div>');
-			$('body').append($(pop).clone());
-						
-			$(".favorite-pop").show();
-			
-			var loginYN = $("#loginYn").val();
-			if(loginYN === 'Y' || 'N' === 'Y'){
-				$("#myMenu").show();
-			} else {
-				$("#info").show();
-			}
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-			Message.alert(textStatus);
-			return false;			
-		}
-	});
-		
-}
-</script>
+
 		<script type="text/javascript">
 	$(document).ready(function () {
 		
@@ -463,7 +443,9 @@ function favoritePopup(){
 
 	<div id="content2" class="sub2">
 	<p> content2 div입니다. 해당 위치에 원하는 사이트/이미지/PHP를 올려주세요</p>
-	<iframe src="http://groupc.dothome.co.kr/testtest5.php"  style="width:90%" height="500" scrolling="auto"></iframe>
+	<iframe src="/datatable.php?url=http://groupc.dothome.co.kr/" frameborder="0" style="width: 100%;border: 2px solid #ccc; height:100%;" scrolling="yes" onload="autoResize(this)" id="myIframe">
+
+</iframe>
 
 	</div></div></div><div class="clear">
 </div>
