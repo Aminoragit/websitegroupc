@@ -4,10 +4,8 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>BAWS(Bigdata Analytics Web Service)</title>
-
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0">
-
 <link rel="shortcut icon" href="./html/index_files/image/icon.jpg">
 <link rel="stylesheet" type="text/css" href="./html/index_files/css/common.css" media="all">
 <link rel="stylesheet" type="text/css" href="./html/index_files/css/font-awesome.min.css" media="all">
@@ -20,8 +18,6 @@
 <link rel="stylesheet" type="text/css" href="./html/index_files/css/main.css" media="all">
 <link rel="stylesheet" type="text/css" href="./html/index_files/css/layout.css" media="all">
 
-
-<script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js"></script>
 <script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(1)"></script>
 <script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(2)"></script>
 <script type="text/javascript" async="" defer="" src="./html/index_files/js/matomo.js(3)"></script>
@@ -94,13 +90,15 @@ $(function(){
 </script>
 
 </head>
-	<body class="">
+	<body>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>AOS.init();</script>
 	<div id="mwrap">
 		<div class="top_area">
 		<dl class="logo_box">
 			<dt>
 				<h1 class="logo">
-					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./html/index_files/image/icon.jpg" alt="기상청 기상자료개방포털" width="50" height="50" style="
+					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./html/index_files/image/icon.jpg" alt="C조 홈페이지" width="50" height="50" style="
     width: 30px;
     height: 30px;
 "></a>
@@ -402,17 +400,10 @@ function favoritePopup(){
 		
 <!-- End:Header Area -->
 		<!-- Start:Body Area -->
-		<script type="text/javascript">
-	$(document).ready(function () {
-		// 회원가입은 백그라운드를 제거한다.
-		$("body").removeClass();
-	});
-	
-</script>
-		<!-- container -->
-		<div id="container" class="intro">
-			<div class="wrap-intro1" style="padding-bottom: 100&#39;;;
-;padding-bottom: 100px;;">
+		<div id="container" class="intro" >
+			<div class="wrap-intro1" data-aos="fade-up" data-aos-anchor-placement="top-center"   data-aos-delay="10000"
+			style="padding-bottom: 100&#39;
+			padding-bottom: 100px;">
 				<div class="intro1">
 					<h2 class="titleM">
 						파이썬,R 빅데이터 플랫폼 + MySQL,HTML + 머신러닝/딥러닝
@@ -420,16 +411,17 @@ function favoritePopup(){
 					</h2>
 					<section class="intro1-section" style="
     width: 1300px;
-    border-left-width: -50;
-    padding-left: -50;
-    left: -50;
-    margin-left: -50;
+    right: 130px;
+
 ">
-						<h3 class="titleS" style="
-    padding-bottom: 20px;
-    border-bottom-width: 20px;
-    top: 0px;
-    left: 450px;
+				<h3 class="titleS" style="
+				padding-bottom: 20px;
+				border-bottom-width: 20px;
+    			left: 450px;
+    			padding-bottom: 20px;
+    			border-bottom-width: 20px;
+    			left: 450px;
+    			top: auto;
 ">
 							<span>"빅데이터!"</span><br>
 
@@ -449,22 +441,20 @@ function favoritePopup(){
 					</section>
 				</div>
 			</div>
-			<div class="wrap-intro2">
-				<div class="intro2">
-					<section class="intro2-section" style="
-    border-top-width: 100px;
-">
+			<div class="wrap-intro2" data-aos="fade-right" data-aos-offset="300"  data-aos-easing="ease-in-sine">
+				<div class="intro2" >
+					<section class="intro2-section" style="border-top-width: 100px;">
 						<h3 class="titleS">
 							When,Where,Who<br>"상상력에는 제한이 없습니다"<br>빅데이터는 무한한 가능성을 가지고 있습니다<br>
 							<span>C조 빅데이터 예측모델은<br><em>다음과 같은 특징을 가지고 있습니다</em></span>
 						</h3>
-						<img src="./html/html/index_files/image/intro2.png" alt="">
+						<img src="./html/index_files/image/intro2.png" alt="">
 					</section>
 				</div>
 			</div>
 			<div class="wrap-intro3">
-				<div class="intro3">
-					<section class="intro3-section1">
+				<div class="intro3" style="padding-top: 50px;">
+					<section class="intro3-section1" data-aos="fade-right" data-aos-offset="300"  data-aos-easing="ease-in-sine">
 						<h3 class="titleS">
 							공공 데이터 사이트를 
 						</h3>
@@ -472,7 +462,7 @@ function favoritePopup(){
 							지상, 해양, 고층, 항공관측, 위성, 레이더, 수치예보모델자료 등 총 30종류의 날씨데이터를 다운로드 받을 수 있습니다.
 						</p>
 					</section>
-					<section class="intro3-section2">
+					<section class="intro3-section2" data-aos="fade-right" data-aos-offset="300"  data-aos-easing="ease-in-sine">
 						<h3 class="titleS">
 							원하는 특성과 값으로 데이터 조회가 가능합니다
 						</h3>
@@ -480,7 +470,7 @@ function favoritePopup(){
 							MySQL과 PHP로 DataBase의 값을 조회 할수 있습니다.
 						</p>
 					</section>
-					<section class="intro3-section3">
+					<section class="intro3-section3" data-aos="fade-right" data-aos-offset="300"  data-aos-easing="ease-in-sine">
 						<h3 class="titleS">
 							Python 파일을 그대로 사용할수 있습니다.
 						</h3>
@@ -488,7 +478,7 @@ function favoritePopup(){
 							별도 수정없이 .py파일을 실행한 localhost 서버에 접속 가능합니다.
 						</p>
 					</section>
-					<section class="intro3-section4">
+					<section class="intro3-section4" data-aos="fade-right" data-aos-offset="300"  data-aos-easing="ease-in-sine">
 						<h3 class="titleS">
 							공모전에서 제공하는 데이터로 나만의 빅데이터 플랫폼을 만들어보세요.
 						</h3>
@@ -496,7 +486,7 @@ function favoritePopup(){
 							원하는 빅데이터 플랫폼을 제작하고 이를 활용하여 예측모델을 생성할수 있습니다/
 						</p>
 					</section>
-					<section class="intro3-section5">
+					<section class="intro3-section5" data-aos="fade-right" data-aos-offset="300"  data-aos-easing="ease-in-sine">
 						<h3 class="titleS">
 							개발자를 위한 오픈 API 서비스를 이용해보세요
 						</h3>
@@ -504,7 +494,7 @@ function favoritePopup(){
 							Open API로 데이터를 실시간 업데이트 할수 있습니다.
 						</p>
 					</section>
-					<section class="intro3-section6" style="margin-bottom:4em">
+					<section class="intro3-section6" data-aos="fade-right" data-aos-offset="300"  data-aos-easing="ease-in-sine">
 						<h3 class="titleS">
 							이렇게 많은 데이터 어디에 쓰이나요?
 						</h3>
@@ -517,11 +507,14 @@ function favoritePopup(){
 							<li>건설 입지를 선정할 때</li>
 						</ul>
 					</section>
-					
+					<br/><br/><br/>
+					<br/><br/><br/><br/><br/><br/>
+
 				</div>
 			</div>
 		</div>
 		<div class="clear">
 </div>
 	</div>
-</body></html>
+</body>
+</html>
