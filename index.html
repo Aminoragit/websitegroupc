@@ -53,30 +53,6 @@ hr {
 } 
 </style>
 
-<script type="text/javascript">
-$(function(){  
-	 if($.datepicker){
-		 $.datepicker.setDefaults( $.datepicker.regional[ "ko" ] );
-	 }
-}); 
-
-</script>
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-	  var u="https://kma.kmamonitor.p-e.kr/matomo/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '2']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
 </head>
 	<body>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -86,7 +62,7 @@ $(function(){
 		<dl class="logo_box">
 			<dt>
 				<h1 class="logo">
-					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./html/index_files/image/icon.jpg" alt="C조 홈페이지" width="50" height="50" style="
+					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./index_files/image/icon.jpg" alt="C조 홈페이지" width="50" height="50" style="
     width: 30px;
     height: 30px;
 "></a>
@@ -95,6 +71,35 @@ $(function(){
 		
 		</dl>
 	</div>
+		
+
+	<!-- samenu1의 ul .has-child hover시 메뉴확장 -->
+<script type="text/javascript">
+	var moveURLFlag = false;
+	var moveURL = '';
+	$(document).ready(function () {
+	
+		changeFontSize();
+		$("form").each(function(){
+			addFontSizeToFormOnsubmit($(this).attr("id"));
+		});
+	
+	var GDSsessionExpireTime;
+</script>	
+
+<script type="text/javascript">
+	$(document).ready(function () {
+	$(".sitemap-d2 li").mouseover(function(){
+		$(this).find(".sitemap-d3").show();
+		$(this).addClass("on");
+	});
+		
+	$(".sitemap-d2 li").mouseout(function(){
+		$(this).find(".sitemap-d3").hide();
+		$(this).removeClass("on");
+	});	
+});
+</script>
 
 
 	
@@ -245,7 +250,7 @@ $(function(){
 							<ul class="sitemap-d1 s1">
 								<li><a href="machine_learning">머신러닝/딥러닝</a>
 									<ul class="sitemap-d2">
-										<li class="has-child"><a href="#" onclick="javascript:goMenuPage('/climate/average30Years/selectAverage30YearsKoreaList.do','188');return false;">머신러닝</a>
+										<li class="has-child"><a href="#">머신러닝</a>
 											<ul class="sitemap-d3">
 												<li><a href="주소입력1_1">RNN</a></li>
 												<li><a href="주소입력1_2">RNN</a></li>
