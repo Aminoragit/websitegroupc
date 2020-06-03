@@ -9,8 +9,6 @@ $(function () {
 	var gplus = "https://plus.google.com/share?hl=ko&url="+currentUrl;	
 	var m2 = "http://me2day.net/plugins/post/new?new_post[body]=%22"+title+"%22:"+currentUrl;
 	var nband = "http://www.band.us/plugin/share?body="+title+"&route="+currentUrl;
-	$('.facebook a').attr('href',fb);
-	$('.twitter a').attr('href',twt);	
 	$('.googleplus a').attr('href',gplus);	
 	$('.me2day a').attr('href',m2);
 	$('.naverband a').attr('href',nband);
