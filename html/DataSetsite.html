@@ -28,6 +28,53 @@
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
+<style>
+
+	.image_table{
+		width: 195px;
+		height: 80px;
+	}
+	table.blueTable {
+  		width: 100%;
+  		text-align: center;
+  	}
+  	table.blueTable td, table.blueTable th {
+  		border: 1px solid #AAAAAA;
+  		padding: 3px 2px;
+  	}
+	table.blueTable tbody td {
+  		font-size: 19px;
+  		font-weight: bold;
+  		color: #000000;
+	}
+	table.blueTable thead {
+		background: #1C6EA4;
+	  background: -webkit-linear-gradient(#5592bb 0%, #327cad 66%, #1C6EA4 100%);
+	  background: -o-linear-gradient(#5592bb 0%, #327cad 66%, #1C6EA4 100%);
+	  background: linear-gradient(#5592bb 0%, #327cad 66%, #1C6EA4 100%);
+	  border-bottom: 2px solid #000000;
+	}
+	table.blueTable thead th {
+  		font-size: 20px;
+    	font-weight: bold;
+  		color: #FFFFFF;
+  		text-align: center;
+  		border-left: 2px solid #F5F5F5;
+	}
+	table.blueTable thead th:first-child {
+  	border-left: none;
+	}
+
+	table.blueTable tfoot {
+  		font-size: 14px;
+  		font-weight: bold;
+  		color: #FFFFFF;
+	}
+	table.blueTable tfoot td {
+	  	font-size: 14px;
+	}
+</style>
+
 </head>
 <body>
 	<!--AOS 효과를 사용하기 위한 script head에 작성하면 동작하지 않으니 주의 할것-->
@@ -238,7 +285,7 @@
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_1.html">기상자료 데이터 포털</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">기상자료 데이터 포털</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
 											<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
@@ -246,7 +293,7 @@
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_2.html">공모전/데이터</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">공모전/데이터</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://dacon.io/">데이콘</a></li>
 											<li><a href="https://www.kaggle.com/">Kaggle</a></li>
@@ -308,13 +355,13 @@
 							<li><a href="https://developers.kakao.com/">카카오 Open API</a></li>
 						</ul>
 					</li>
-					<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_1.html"><span>기상자료 데이터 포털</span></a>
+					<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html"><span>기상자료 데이터 포털</span></a>
 						<ul class="lnb_list1">
 							<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
 							<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
 						</ul>
 					</li>
-					<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_2.html"><span>공모전/데이터</span></a>
+					<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html"><span>공모전/데이터</span></a>
 						<ul class="lnb_list1">
 							<li><a href="https://dacon.io/">데이콘</a></li>
 							<li><a href="https://www.kaggle.com/">Kaggle</a></li>
@@ -335,7 +382,48 @@
 	</div>
 
 	<div id="content2" class="sub2">
-		<p> content2 div입니다. 해당 위치에 원하는 사이트/이미지/PHP를 올려주세요</p>
+		<div style="width: 80%;padding:10px;margin-left: 30px;margin-left: 10%;">
+		<table class="blueTable">
+			<thead >
+				<tr><th align="center" colspan="2">공공데이터 포털 추천</th></tr></thead>
+				<tbody align="center">
+					<tr>
+						<td style="padding-top: 20px;"><a href="https://www.data.go.kr/"><img class="image_table" src="./index_files/image/공공.png" alt="My Image"><br/>공공데이터 포털</a></td>
+						<td><a href="https://developers.naver.com/main/"><img class="image_table" src="./index_files/image/네이버.png" alt="My Image"><br/>네이버 OPEN API</a></td>
+					</tr>
+					<tr>
+						<td><a href="http://data.seoul.go.kr/"><img class="image_table" src="./index_files/image/서울.png" alt="My Image"><br/>서울 데이터 포털</a></td>
+						<td style="padding-top: 20px;"><a href="https://developers.kakao.com/"> <img class="image_table" src="./index_files/image/카카오.png" alt="My Image"><br/>카카오 OPEN API</a></td>
+					</tr>
+					
+					
+			
+				</tbody>
+			</table>
+		</div>
+		<div style="width: 80%;padding:10px;margin-left: 10%;">
+		<table class="blueTable">
+			<thead>
+				<tr><th align="center">기상자료 데이터 포털</th></tr></thead>
+				<tbody align="center">
+					<tr><td><a href="https://data.kma.go.kr/cmmn/main.do"><img class="image_table" src="./index_files/image/기상청.gif" alt="My Image" style="height: 50px;padding-top: 15px;padding-bottom: 15px;width: 250px;"><br/>기상청 자료개방</a></td></tr>
+					<tr><td><a href="https://bd.kma.go.kr/kma2019/svc/main.do"><img class="image_table" src="./index_files/image/날씨마루.png" alt="My Image"><br/>날씨마루</a></td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div style="width: 80%;padding:10px; margin-left: 10%;" >
+		<table class="blueTable">
+			<thead>
+				<tr><th align="center">공모전/데이터</th></tr></thead>
+				<tbody align="center">
+					<tr><td style="padding-top: 15px;"><a href="https://dacon.io/"><img class="image_table" src="./index_files/image/데이콘.png" alt="My Image"><br/>데이콘</a></td></tr>
+					<tr><td><a href="https://www.kaggle.com/"><img class="image_table" src="./index_files/image/카글.png" alt="My Image"><br/>Kaggle</a></td></tr>
+					<tr><td><a href="https://www.wevity.com/"><img class="image_table" src="./index_files/image/위비.png" alt="My Image"><br/>WEVITY</a></td></tr>
+					<tr><td><a href="https://www.all-con.co.kr/"><img class="image_table" src="./index_files/image/올컨.jpg" alt="My Image"><br/>AllContests</a></td></tr>
+					<tr><td><a href="https://www.thinkcontest.com/"><img class="image_table" src="./index_files/image/씽굿.png" alt="My Image"><br/>씽굿</a></td></tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
 </div>
