@@ -199,22 +199,23 @@ document.addEventListener('DOMContentLoaded', e => {
 <div class="mgnb-wrap">
 	<div class="mgnb-areas">
 		<ul class="mgnbs" style="width: 1000px; padding-left: 0px;">
+
 			<!--<li>마다 메뉴가 1개씩 있으며 하위 메뉴<dt>와 최하위 메뉴<dd->ul->li>로 구성되어 있다.-->
 			<!--메뉴1 예측모델 구상 목표-->
 			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8%EB%AA%A9%ED%91%9C.html">예측모델 구상 목표</a></li>
 
 			<!--메뉴2 머신러닝 딥러닝-->
-			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝 딥러닝</a>
+			<li class=""><a href="http://아이피/knn">머신러닝 딥러닝</a>
 				<div class="mgnbs-div">	
 					<dl>
 						<dt class="sub1_1"><p>머신러닝</p></dt>
 						<dd>
 							<ul>
-								<li class="sub1_1_1"><a href="http://192.168.0.159:5000/pre_1">RNN</a></li>
-								<li class="sub1_1_2"><a href="주소입력1_1">CNN</a></li>
-								<li class="sub1_1_3"><a href="주소입력1_2">고층</a></li>
-								<li class="sub1_1_4"><a href="주소입력1_3">항공</a></li>
-								<li class="sub1_1_5"><a href="주소입력1_4">세계기상전문(GTS)</a></li>
+								<li class="sub1_1_1"><a href="http://아이피/knn">Knn</a></li>
+								<li class="sub1_1_2"><a href="http://아이피/kmeans">K-Means</a></li>
+								<li class="sub1_1_3"><a href="http://아이피/tree">DecisionTree</a></li>
+								<li class="sub1_1_4"><a href="http://아이피/r_forest">R_Forest</a></li>
+								<li class="sub1_1_5"><a href="http://아이피/Gradient">Gradient</a></li>
 							</ul>									
 						</dd>		
 					</dl>
@@ -222,12 +223,13 @@ document.addEventListener('DOMContentLoaded', e => {
 						<dt class="sub1_11"><p>딥러닝[Keras]</p>	</dt>
 						<dd>
 							<ul>
-								<li class="sub1_1_1"><a href="주소입력2_1">Dense</a></li>
-								<li class="sub1_11_2"><a href="주소입력2_2">LSTM</a></li>
+								<li class="sub1_1_1"><a href="http://아이피/keras">Keras(Dense)</a></li>
+								
 								</ul>									
 						</dd>		
 					</dl>
-				</div></li>
+				</div>
+			</li>
 			
 			<!--메뉴3 데이터셋 사이트-->
 			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">데이터셋 사이트</a>
@@ -264,32 +266,34 @@ document.addEventListener('DOMContentLoaded', e => {
 							</ul>									
 						</dd>
 					</dl>
-				</div></li>
+				</div>
+			</li>
 										
 			<!--메뉴4 MySQL-->
-			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">MySQL</a>
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/data_download.html">MySQL</a>
 				<div class="mgnbs-div">
 					<div class="mgnbs-div2">
-						<dl style="height: 150px;width: 250px;">
-						<dt class="sub3_1" style="margin-bottom: 10px;"><p>전처리 데이터</p></dt>
-						<dd>
-							<ul>
-								<li class="sub3_1_1"><a href="주소입력">대한민국 해양 오염정도</a></li>
-								<li class="sub3_1_2"><a href="주소입력" >쓰레기 수거업체 일일 수거량</a></li>
-							</ul>									
-						</dd>
-						</dl>
 						<dl>
-							<dt class="sub3_2"><p>DB 조회</p></dt>
+							<dt class="sub3_1"><p>DB 조회</p></dt>
 							<dd>
 								<ul>
-									<li class="sub3_2_1"><a href="주소입력">DB 조회 방법</a></li>
-									<li class="sub3_2_2"><a href="주소입력">DB 조회페이지</a></li>
+									<li class="sub3_2_1"><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">DB 조회 방법</a></li>
+									<li class="sub3_2_2"><a href="http://groupc.dothome.co.kr/mysql.php">DB 조회 페이지</a></li>
 								</ul>									
 							</dd>		
 						</dl>	
+						<dl style="height: 150px;width: 250px;">
+						<dt class="sub3_2" style="margin-bottom: 10px;"><p>전처리 데이터</p></dt>
+						<dd>
+							<ul>
+								<li class="sub3_1_1"><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터 다운로드</a></li>
+							</ul>									
+						</dd>
+						</dl>
 					</div>
-				</div></li>
+				</div>
+			</li>
+
 
 			<!-- 메뉴5 C조소개-->
 			<li class=""><a href="https://aminoragit.github.io/websitegroupc/index.html">C조에 대하여</a></li></ul>
@@ -307,22 +311,23 @@ document.addEventListener('DOMContentLoaded', e => {
 							<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝/딥러닝</a>
 								<!-- <ul .sitemap-d2>==하위 메뉴 -->
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝</a>
+									<li class="has-child"><a href="http://아이피/knn">머신러닝</a>
 										<!-- <ul .sitemap-d3>==최하위 메뉴-->
 										<ul class="sitemap-d3">
-											<li><a href="주소입력1_1">RNN</a></li>
-											<li><a href="주소입력1_2">RNN</a></li>
-											<li><a href="주소입력1_3">RNN</a></li>
-											<li><a href="주소입력1_4">RNN</a></li>
+											<li><a href="http://아이피//knn">KNN</a></li>
+											<li><a href="http://아이피//kmeans">K-Means</a></li>
+											<li><a href="http://아이피//tree">DecisionTree</a></li>
+											<li><a href="http://아이피//r_forest">R_Forest</a></li>
+											<li><a href="http://아이피//Gradient">Gradient</a></li>
 										</ul>
 									</li>
 								</ul>
 
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="딥러닝 주소 입력 바람">딥러닝</a>
+									<li class="has-child"><a href="http://아이피/keras">딥러닝</a>
 										<ul class="sitemap-d3">
-											<li><a href="주소입력2_1">Dense</a></li>
-											<li><a href="주소입력2_2">Dense</a></li>
+											<li><a href="http://아이피//keras">Keras(Dense)</a></li>
+											
 										</ul>
 									</li>
 								</ul>
@@ -333,7 +338,7 @@ document.addEventListener('DOMContentLoaded', e => {
 						<ul class="sitemap-d1 s2">
 							<li><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">데이터셋 사이트</a>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="">공공데이터 포털 추천</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">공공데이터 포털 추천</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://www.data.go.kr/">공공데이터 포털</a></li>
 											<li><a href="http://data.seoul.go.kr/">서울 데이터 센터</a></li>
@@ -343,7 +348,7 @@ document.addEventListener('DOMContentLoaded', e => {
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="">기상자료 데이터 포털</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_1.html">기상자료 데이터 포털</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
 											<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
@@ -351,7 +356,7 @@ document.addEventListener('DOMContentLoaded', e => {
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="">공모전/데이터</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_2.html">공모전/데이터</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://dacon.io/">데이콘</a></li>
 											<li><a href="https://www.kaggle.com/">Kaggle</a></li>
@@ -366,20 +371,19 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
 						<ul class="sitemap-d1 s3">
-							<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">MYSQL</a>
+							<li><a href="http://groupc.dothome.co.kr/mysql.php">MYSQL</a>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="">전처리 데이터</a>
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터</a>
 										<ul class="sitemap-d3">
-											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">대한민국 해양 오염정도</a></li>
-											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">쓰레기 수거업체 일일수거량</a></li>
+											<li><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터 다운로드</a></li>
 										</ul>
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회</a>
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/mysql.php">DB조회</a>
 										<ul class="sitemap-d3">
-											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회 방법</a></li>
-											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" >DB조회 페이지</a></li>
+											<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">DB조회 방법</a></li>
+											<li><a href="http://groupc.dothome.co.kr/mysql.php" >DB조회 페이지</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -400,38 +404,41 @@ document.addEventListener('DOMContentLoaded', e => {
 	</div>
 	<!-- //gnb -->	
 
-	<div id="container">
-		<div id="sidebar" style="height: 270px;"> 
-			<div class="lnb-wrap">
-				<div class="lnb-top">
-					<h3 class="lnb-title1"><span class="data_tit1">머신러닝/딥러닝</span></h3>
-					<ul id="leftMenuUi" class="lnbs">
-						<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html"><span>머신러닝</span></a>
-								<ul class="lnb_list1" style="width: 260px;">
-									<li><a href="주소입력">RNN</a></li>
-									<li><a href="주소입력">RNN2</a></li>
-									<li><a href="주소입력">RNN3</a></li>
-									<li><a href="주소입력">RNN4</a></li>
-								</ul>
-						</li>
-						<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html"><span>딥러닝</span></a>
-								<ul class="lnb_list1">
-									<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">Dense</a></li>								
-									<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">LSTM</a></li>	
-								</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+<div id="container">
+	<div id="sidebar" style="height: 270px;"> 
+		<div class="lnb-wrap">
+		<div class="lnb-top">
+			<h3 class="lnb-title1">
+				<span class="data_tit1">MySQL</span>
+			</h3>
+			<ul id="leftMenuUi" class="lnbs">
+				<li class="has-child">							
+					<a href="https://aminoragit.github.io/websitegroupc/html/data_download.html"><span>전처리 데이터</span></a>
+						<ul class="lnb_list1" style="width: 260px;">
+							<li><a href="https://aminoragit.github.io/websitegroupc/html/data_download.html">전처리 데이터 다운로드</a></li>
+							
+						</ul>
+					</li>
+				<li class="has-child">							
+					<a href="http://groupc.dothome.co.kr/mysql.php"><span>DB 조회</span></a>
+						<ul class="lnb_list1">
+							<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">DB 조회 방법</a></li>								
+							<li><a href="http://groupc.dothome.co.kr/mysql.php">DB 조회페이지</a></li>	
+						</ul>
+				</li>
+			</ul>
 
-		<div id="content" class="sub">
-			<div class="content-head" style="margin-left: 250px;">
-				<h2>머신러닝/딥러닝</h2>
-			</div>
 		</div>
+		</div>
+	</div>
 
-		<div id="content2" class="sub2">
+	<div id="content" class="sub">
+		<div class="content-head" style="margin-left: 250px;">
+			<h2>DB 조회방법</h2>
+		</div>
+	</div>
+
+		<div id="content2" class="sub2" style=" margin-bottom: 60px;">
 			
 			<?php
 	$db_host = "localhost"; 
