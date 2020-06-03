@@ -37,6 +37,8 @@ background: linear-gradient(to top, #42434e, #595f63)); color:#fff;text-shadow:n
 .main-news-section,.main-stat{position:relative}
 
 
+
+
 /* main GNB wrap */
 .mgnb-wrap {width:100%; border-bottom:solid 1px #3e3e3e;}
 .mgnbs-area{width:1070px;margin:0 auto;padding:0; position:relative;}
@@ -187,11 +189,7 @@ ul.lnbs li.has-child.fixed {display:block !important}
 /*lnb 타이틀 추가 */
 h3.lnb-title1 {position:relative; width:100%; color:#4c4c4c; padding:35px 0; background:#032e50;}
 h3.lnb-title1 span {font-size:24px; line-height:26px; color:#fff; display:block; text-align:center; padding-top:65px;}
-h3.lnb-title1 span.data_tit1 {background:url(../images/common/titls_icon1.png) center top no-repeat;}
-h3.lnb-title1 span.data_tit2 {background:url(../images/common/titls_icon2.png) center top no-repeat;}
-h3.lnb-title1 span.data_tit3 {background:url(../images/common/titls_icon3.png) center top no-repeat;}
-h3.lnb-title1 span.data_tit4 {background:url(../images/common/titls_icon4.png) center top no-repeat;}
-h3.lnb-title1 span.data_tit5 {background:url(../images/common/titls_icon5.png) center top no-repeat;}
+
 
 
 /* content Tools */

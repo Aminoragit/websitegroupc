@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<!-- saved from url=(0056)file:///C:/Users/TJOEUN-JR/Desktop/machine_learning.html -->
-<html lang="ko-KR">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<html lang="ko-KR">
+<head><meta http-equiv="Content-Type" content="text; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>BAWS(Bigdata Analytics Web Service)</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0">
+
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="shortcut icon" href="./index_files/image/icon.jpg">
 <link rel="stylesheet" type="text/css" href="./index_files/css/common.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/font-awesome.min.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/common-ui.css" media="all">
-<link rel="stylesheet" type="text/css" href="./index_files/css/board.css" media="all">
-<link rel="stylesheet" type="text/css" href="./index_files/css/messagebox1.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/jquery.bxslider.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/zTreeStyle.css">
 <link rel="stylesheet" type="text/css" href="./index_files/css/sub.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/main.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/layout.css" media="all">
 <script type="text/javascript" src="./index_files/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="./index_files/js/ddlist.jquery.min.js"></script>
 <script type="text/javascript" src="./index_files/js/common.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.scrollTo.js"></script>
 <script type="text/javascript" src="./index_files/js/TweenMax.min.js"></script>
-<script type="text/javascript" src="./index_files/js/jquery.messagebox.min.js"></script>
 <script type="text/javascript" src="./index_files/js/browser.js"></script>
 <script type="text/javascript" src="./index_files/js/menu.js"></script>
-<script type="text/javascript" src="./index_files/js/messages.js"></script>
 <script type="text/javascript" src="./index_files/js/gdsUtil.js"></script>
 <script type="text/javascript" src="./index_files/js/custom.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
-
-
+<style type="text/css">
+#loading-mask {
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#ffffff;
+    opacity:0.80;
+    filter:alpha(opacity=80);
+    z-index:30000;
+    display:none;
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+} 
+</style>
 
 </head>
 <body>
@@ -101,10 +114,10 @@
 
 			<!--<li>마다 메뉴가 1개씩 있으며 하위 메뉴<dt>와 최하위 메뉴<dd->ul->li>로 구성되어 있다.-->
 			<!--메뉴1 예측모델 구상 목표-->
-			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8%EB%AA%A9%ED%91%9C.html">예측모델 구상 목표</a></li>
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8%EB%AA%A9%ED%91%9C.html">예측모델 구상 목표</a></li>
 
 			<!--메뉴2 머신러닝 딥러닝-->
-			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝 딥러닝</a>
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/machine_learning.html">머신러닝 딥러닝</a>
 				<div class="mgnbs-div">	
 					<dl>
 						<dt class="sub1_1"><p>머신러닝</p></dt>
@@ -131,7 +144,7 @@
 			</li>
 			
 			<!--메뉴3 데이터셋 사이트-->
-			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">데이터셋 사이트</a>
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/DataSetsite.html">데이터셋 사이트</a>
 				<div class="mgnbs-div">
 					<dl>
 						<dt class="sub2_1" style="margin-bottom: 10px;"><p>공공데이터포털 추천</p></dt>
@@ -169,7 +182,7 @@
 			</li>
 										
 			<!--메뉴4 MySQL-->
-			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">MySQL</a>
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/Mysql.html">MySQL</a>
 				<div class="mgnbs-div">
 					<div class="mgnbs-div2">
 						<dl style="height: 150px;width: 250px;">
@@ -197,8 +210,6 @@
 			<!-- 메뉴5 C조소개-->
 			<li class=""><a href="https://aminoragit.github.io/websitegroupc/index.html">C조에 대하여</a></li></ul>
 
-
-
 		<div class="samenu1">
 			<a href="#"><img src="./index_files/image/all_btn1.gif" alt="전체 메뉴 보기"></a>
 				<div class="mgnbs-div3" style="display: block;width: 1080px;">
@@ -210,7 +221,7 @@
 							<li><a href="machine_learning">머신러닝/딥러닝</a>
 								<!-- <ul .sitemap-d2>==하위 메뉴 -->
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/machine_learning.html">머신러닝</a>
 										<!-- <ul .sitemap-d3>==최하위 메뉴-->
 										<ul class="sitemap-d3">
 											<li><a href="주소입력1_1">RNN</a></li>
@@ -303,57 +314,47 @@
 	</div>
 	<!-- //gnb -->	
 
-		<div id="container">
-		<div id="sidebar" style="
-    height: 270px;
-"> 
-			<div class="lnb-wrap">
-				<div class="lnb-top">
-					<h3 class="lnb-title1">
-						<span class="data_tit1">MySQL</span>
-
-							</h3>
-					<ul id="leftMenuUi" class="lnbs">
-					<li class="has-child">							
-								<a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">
-									<span>전처리 데이터</span>
-
-								
-								</a>
-								<ul class="lnb_list1" style="width: 260px;">
-									<li><a href="주소입력">대한민국 해양 오염정도</a></li>
-									<li><a href="주소입력">쓰레기 수거업체 일일 수거량</a></li>
-								</ul>
-					</li>																												
-								</li>
-							<li class="has-child">							
-								<a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">
-									<span>DB 조회</span>
-								</a>
-								<ul class="lnb_list1">
-										<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">DB 조회 방법</a></li>								
-										<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html#">DB 조회페이지</a></li>	
-								</ul>
-							</li>
+<div id="container">
+	<div id="sidebar" style="height: 270px;"> 
+		<div class="lnb-wrap">
+		<div class="lnb-top">
+			<h3 class="lnb-title1">
+				<span class="data_tit1">MySQL</span>
+			</h3>
+			<ul id="leftMenuUi" class="lnbs">
+				<li class="has-child">							
+					<a href="https://aminoragit.github.io/websitegroupc/Mysql.html"><span>전처리 데이터</span></a>
+						<ul class="lnb_list1" style="width: 260px;">
+							<li><a href="주소입력">대한민국 해양 오염정도</a></li>
+							<li><a href="주소입력">쓰레기 수거업체 일일 수거량</a></li>
 						</ul>
-				</div>
-			</div>
+					</li>
+				<li class="has-child">							
+					<a href="https://aminoragit.github.io/websitegroupc/Mysql.html"><span>DB 조회</span></a>
+						<ul class="lnb_list1">
+							<li><a href="https://aminoragit.github.io/websitegroupc/machine_learning.html#">DB 조회 방법</a></li>								
+							<li><a href="https://aminoragit.github.io/websitegroupc/machine_learning.html#">DB 조회페이지</a></li>	
+						</ul>
+				</li>
+			</ul>
+
 		</div>
+		</div>
+	</div>
+
 	<div id="content" class="sub">
-	<div class="breadcrumb">
-	
-</div>
-<div class="content-head" style="margin-left: 250px;">
-	<h2>DB 조회방법</h2>
-</div>
+		<div class="content-head" style="margin-left: 250px;">
+			<h2>DB 조회방법</h2>
 		</div>
+	</div>
 
 	<div id="content2" class="sub2">
-	<p> content2 div입니다. 해당 위치에 원하는 사이트/이미지/PHP를 올려주세요</p>
-	<iframe src="http://groupc.dothome.co.kr/datatable.php" frameborder="0" style="width: 100%;border: 2px solid #ccc; height:100%;" scrolling="yes" onload="autoResize(this)" id="myIframe">
-
-</iframe>
-
-	</div></div></div><div class="clear">
+		<p> content2 div입니다. 해당 위치에 원하는 사이트/이미지/PHP를 올려주세요</p>
+		<iframe src="http://groupc.dothome.co.kr/datatable.php" frameborder="0" style="width: 100%;border: 2px solid #ccc; height:100%;" scrolling="yes" onload="autoResize(this)" id="myIframe"></iframe>
+	</div>
 </div>
-</body></html>
+</div>
+<div class="clear">
+</div>
+</body>
+<>
