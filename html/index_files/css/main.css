@@ -1,16 +1,9 @@
 @charset "utf-8";
 /* ---------------------------------------------2020 main layout end------------------------------------------------- */
 .main #mfooter{border:none}
-.container-wrap{width:100%; background:url(../images/common/main_bg6.jpg) center top no-repeat;}
-.container_dot {width:100%; /* background:url(../images/common/bg_dot1.png);  */height:555px;padding:50px 0px;}
 .container {width:1070px; margin:0 auto; position:relative;}
 .clear {content:''; overflow:hidden; clear:both;}
 .main_titl1 p {font-size:18px;line-height:21px; font-weight:normal; color:#828282; margin:0 auto; width:360px; margin-bottom:5px; text-align: left;}
 .main_titl1 h3 {font-size:57px; line-height:57px; color:#191921; font-weight:bold; margin-bottom:40px;}
 .main_titl1 strong {font-size:57px; line-height:57px; color:#6ca7d3; font-weight:bold; margin-bottom:40px;}
-.section-datamap2 > p.all_btn {float:left; font-weight:bold; color:#000;  width:150px; height:50px; padding-left:10px; padding-right:10px; padding-bottom:10px; padding-top:120px; display:block; background:#fff url(../images/common/all_arrow.png) 90% 150px no-repeat; font-size:24px; line-height:28px; text-align:left; margin-right:10px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.6) !important;}
-.section-datamap2 > p.all_btn span {display:block;}
-div.api-box {width:320px; height:170px; background:rgba(255, 255, 255, 0.6)}
-div.api-box:hover {background:rgba(255, 255, 255, 1);box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);}
-div.api-box a {background:url(../images/common/api_icon1.png) center 80% no-repeat; width:320px; height:170px; display:block; font-size:0px;}
 
