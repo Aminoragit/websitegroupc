@@ -29,74 +29,40 @@
 <script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
 </head>
-	<body class="">
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>AOS.init();</script>
-	<div id="mwrap">
-		<div class="top_area">
+<body>
+	<!--AOS 효과를 사용하기 위한 script head에 작성하면 동작하지 않으니 주의 할것-->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>AOS.init();</script>
+<div id="mwrap">
+	<div class="top_area">
 		<dl class="logo_box">
 			<dt>
 				<h1 class="logo">
-					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./index_files/image/icon.jpg" alt="기상청 기상자료개방포털" width="50" height="50" style="
-    width: 30px;
-    height: 30px;
-"></a>
+					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./index_files/image/icon.jpg" alt="C조 홈페이지" width="50" height="50" style="width: 30px; height: 30px;"></a>
 				</h1>
 			</dt>
-		
 		</dl>
 	</div>
-		<!-- Start:Top Area -->
-		<script type="text/javascript">
-var moveURLFlag = false;
-var moveURL = '';
-$(document).ready(function () {
-	/* 폰트 변경 및 form submit 시 fontSize 파라미터 추가. custom.js 에..... */
-	changeFontSize();
-	$("form").each(function(){
-		addFontSizeToFormOnsubmit($(this).attr("id"));
-	});
 	
-var GDSsessionExpireTime;
-});
-
-</script>	
 <script type="text/javascript">
-function favoritePopup(){
-	$("#divPopupFavorite").remove();
-	
-	$.ajax({
-		type: 'post',
-		url: "/cmmn/myFavoriteLayerPopup.do;jsessionid=eLASVS5105ydHa1nVcL4kWGj9tmQacqO32oSgaabCXWmJcKf4tbynlyU0QSbWgaV.was02_servlet_engine5",
-		dataType : "html",
-		success: function(data) {
-
-			var pop = $('<div id="divPopupFavorite">'+data+'</div>');
-			$('body').append($(pop).clone());
-						
-			$(".favorite-pop").show();
-			
-			var loginYN = $("#loginYn").val();
-			if(loginYN === 'Y' || 'N' === 'Y'){
-				$("#myMenu").show();
-			} else {
-				$("#info").show();
-			}
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-			Message.alert(textStatus);
-			return false;			
-		}
-	});
-		
-}
-</script>
-		<script type="text/javascript">
+	var moveURLFlag = false;
+	var moveURL = '';
 	$(document).ready(function () {
-		
+		changeFontSize();
+		$("form").each(function(){
+			addFontSizeToFormOnsubmit($(this).attr("id"));
+	});
+	
+	var GDSsessionExpireTime;
+});
+</script>
+
+<!-- samenu1의 ul .has-child 마우스 올려놓을때 메뉴확장 --><!---->
+<script type="text/javascript">
+	$(document).ready(function () {
 		$(".sitemap-d2 li").mouseover(function(){
-			$(this).find(".sitemap-d3").show();
-			$(this).addClass("on");
+		$(this).find(".sitemap-d3").show();
+		$(this).addClass("on");
 		});
 		
 		$(".sitemap-d2 li").mouseout(function(){
@@ -107,234 +73,227 @@ function favoritePopup(){
 </script>
 
 	
-	<!-- header -->
-	<div id="header" class="main-header">
-		<div class="mheader_wrap" style="padding-top: 50px;height: 100px;padding-bottom: 50px;">
-
-
-				<div class="main_titl1">
-					<p style="
-    margin-left: 250px;
-">더조은 아카데미</p>
-					<h3 style="
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-right: 20px;
-
-"><strong style="
-    padding-top: 0px;
-">C조</strong> 수질 오염 예측모델</h3>
-				</div>
-				
-				
-			</div>
-			
-		</div>
+<!-- header 부분-->
+<div id="header" class="main-header">
+	<div class="mheader_wrap" style="padding-top: 50px;height: 100px;padding-bottom: 50px;">
+	<div class="main_titl1">
+		<p style="margin-left: 250px;">더조은 아카데미</p>
+		<h3 style="padding-top: 0px; padding-left: 0px; padding-right: 20px;">
+			<strong style="padding-top: 0px;">C조</strong> 
+			수질 오염 예측모델
+		</h3>
 	</div>
-	<!-- //header -->
-			
+	</div>
+</div>
 	
-	<div class="mgnb-wrap">
-		<div class="mgnb-areas">
-			<ul class="mgnbs" style="
-    width: 1000px;
-    padding-left: 0px;
-">
-				<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8%EB%AA%A9%ED%91%9C.html">예측모델 구상 목표</a></li>
-				<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝 딥러닝</a>
-					<div class="mgnbs-div">	
-						<dl>
-							<dt class="sub1_1">														
-								<p>머신러닝</p>
-							</dt>
-							<dd>
-								<ul>
-									<li class="sub1_1_1"><a href="http://192.168.0.159:5000/">RNN</a></li>
-									<li class="sub1_1_2"><a href="주소입력1_1">CNN</a></li>
-									<li class="sub1_1_3"><a href="주소입력1_2">고층</a></li>
-									<li class="sub1_1_4"><a href="주소입력1_3">항공</a></li>
-									<li class="sub1_1_5"><a href="주소입력1_4">세계기상전문(GTS)</a></li>
-									</ul>									
-							</dd>		
-						</dl>
-						
-						<dl>
-							<dt class="sub1_11">														
-								<p>딥러닝[Keras]</p>
-							</dt>
-							<dd>
-								<ul>
-									<li class="sub1_1_1"><a href="주소입력2_1">Dense</a></li>
-									<li class="sub1_11_2"><a href="주소입력2_2">LSTM</a></li>
-									</ul>									
-							</dd>		
-						</dl>
-						</div>
-				</li>
+<!--메인 메뉴 부분-->	
+<div class="mgnb-wrap">
+	<div class="mgnb-areas">
+		<ul class="mgnbs" style="width: 1000px; padding-left: 0px;">
 
-				<li class=""><a href="데이터셋 사이트 주소">데이터셋 사이트</a>
-					<div class="mgnbs-div">
-						<dl>
-							<dt class="sub2_1" style="margin-bottom: 10px;"><p>공공데이터포털 추천</p>
-							</dt>
-							<dd>
-								<ul>
-									<li class="sub2_1_1"><a href="https://www.data.go.kr/">공공 데이터 포털</a></li>
-									<li class="sub2_1_2"><a href="http://data.seoul.go.kr/">서울 열린 데이터 광장</a></li>
-									<li class="sub2_1_3"><a href="https://developers.naver.com/main/">네이버 Open API </a></li>
-									<li class="sub2_1_4"><a href="https://developers.kakao.com/">카카오 Open API </a></li>
+			<!--<li>마다 메뉴가 1개씩 있으며 하위 메뉴<dt>와 최하위 메뉴<dd->ul->li>로 구성되어 있다.-->
+			<!--메뉴1 예측모델 구상 목표-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8%EB%AA%A9%ED%91%9C.html">예측모델 구상 목표</a></li>
 
-									</ul>									
-							</dd>
-						</dl>
-						<dl>
-							<dt class="sub2_2" style="margin-bottom: 10px;"><p>기상자료 데이터 포털</p>
-							</dt>
-							<dd>
-								<ul>
-									<li class="sub2_2_1"><a href="https://data.kma.go.kr/cmmn/main.do">기상청 기상자료데이터</a></li>
-									<li class="sub2_2_2"><a href="https://bd.kma.go.kr/kma2019/svc/main.do" >날씨마루</a></li>
-									</ul>									
-							</dd>
-						</dl>
-						<dl>
-							<dt class="sub2_3" style="margin-bottom: 10px;"><p>공모전/데이터</p>
-							</dt>
-							<dd>
-								<ul>
-									<li class="sub2_3_1"><a href="https://dacon.io/">데이콘</a></li>
-									<li class="sub2_3_2"><a href="https://www.kaggle.com/">Kaggle</a></li>
-									<li class="sub2_3_3"><a href="https://www.wevity.com/">WEVITY</a></li>
-									<li class="sub2_3_4"><a href="https://www.all-con.co.kr/page/uni_contest.php">allcontest</a></li>
-									<li class="sub2_3_5"><a href="https://www.thinkcontest.com/">씽굿</a></li>
-									</ul>									
-							</dd>
-						</dl>
-					</div>
-				</li>
+			<!--메뉴2 머신러닝 딥러닝-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝 딥러닝</a>
+				<div class="mgnbs-div">	
+					<dl>
+						<dt class="sub1_1"><p>머신러닝</p></dt>
+						<dd>
+							<ul>
+								<li class="sub1_1_1"><a href="http://192.168.0.159:5000/pre_1">RNN</a></li>
+								<li class="sub1_1_2"><a href="주소입력1_1">CNN</a></li>
+								<li class="sub1_1_3"><a href="주소입력1_2">고층</a></li>
+								<li class="sub1_1_4"><a href="주소입력1_3">항공</a></li>
+								<li class="sub1_1_5"><a href="주소입력1_4">세계기상전문(GTS)</a></li>
+							</ul>									
+						</dd>		
+					</dl>
+					<dl>
+						<dt class="sub1_11"><p>딥러닝[Keras]</p>	</dt>
+						<dd>
+							<ul>
+								<li class="sub1_1_1"><a href="주소입력2_1">Dense</a></li>
+								<li class="sub1_11_2"><a href="주소입력2_2">LSTM</a></li>
+								</ul>									
+						</dd>		
+					</dl>
+				</div>
+			</li>
+			
+			<!--메뉴3 데이터셋 사이트-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">데이터셋 사이트</a>
+				<div class="mgnbs-div">
+					<dl>
+						<dt class="sub2_1" style="margin-bottom: 10px;"><p>공공데이터포털 추천</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_1_1"><a href="https://www.data.go.kr/">공공 데이터 포털</a></li>
+								<li class="sub2_1_2"><a href="http://data.seoul.go.kr/">서울 열린 데이터 광장</a></li>
+								<li class="sub2_1_3"><a href="https://developers.naver.com/main/">네이버 Open API </a></li>
+								<li class="sub2_1_4"><a href="https://developers.kakao.com/">카카오 Open API </a></li>
+							</ul>									
+						</dd>
+					</dl>
+					<dl>
+						<dt class="sub2_2" style="margin-bottom: 10px;"><p>기상자료 데이터 포털</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_2_1"><a href="https://data.kma.go.kr/">기상청 기상자료데이터</a></li>
+								<li class="sub2_2_2"><a href="https://bd.kma.go.kr/kma2019/svc/main.do" >날씨마루</a></li>
+								</ul>									
+						</dd>
+					</dl>
+					<dl>
+						<dt class="sub2_3" style="margin-bottom: 10px;"><p>공모전/데이터</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_3_1"><a href="https://dacon.io/">데이콘</a></li>
+								<li class="sub2_3_2"><a href="https://www.kaggle.com/">Kaggle</a></li>
+								<li class="sub2_3_3"><a href="https://www.wevity.com/">WEVITY</a></li>
+								<li class="sub2_3_4"><a href="https://www.all-con.co.kr/page/uni_contest.php">allcontest</a></li>
+								<li class="sub2_3_5"><a href="https://www.thinkcontest.com/">씽굿</a></li>
+							</ul>									
+						</dd>
+					</dl>
+				</div>
+			</li>
 										
-				<li class=""><a href="MySQL사이트 주소">MySQL</a>
-					<div class="mgnbs-div">
-						<div class="mgnbs-div2">
-							<dl style="height: 150px;width: 250px;">
-								<dt class="sub3_1" style="margin-bottom: 10px;">
-									<p>전처리 데이터</p>
-								</dt>
-								<dd>
-									<ul>
-										<li class="sub3_1_1"><a href="주소입력">대한민국 해양 오염정도</a></li>
-										<li class="sub3_1_2"><a href="주소입력" >쓰레기 수거업체 일일 수거량</a></li>
-									</ul>									
-							</dd>
-							</dl>
-							<dl>
-								<dt class="sub3_2">
-									<p>DB 조회</p>
-								</dt>
-								<dd>
-									<ul>
-										<li class="sub3_2_1"><a href="주소입력">DB 조회 방법</a></li>
-										<li class="sub3_2_2"><a href="주소입력">DB 조회페이지</a></li>
-										</ul>									
-								</dd>		
-							</dl>	
-							</div>
+			<!--메뉴4 MySQL-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">MySQL</a>
+				<div class="mgnbs-div">
+					<div class="mgnbs-div2">
+						<dl style="height: 150px;width: 250px;">
+						<dt class="sub3_1" style="margin-bottom: 10px;"><p>전처리 데이터</p></dt>
+						<dd>
+							<ul>
+								<li class="sub3_1_1"><a href="주소입력">대한민국 해양 오염정도</a></li>
+								<li class="sub3_1_2"><a href="주소입력" >쓰레기 수거업체 일일 수거량</a></li>
+							</ul>									
+						</dd>
+						</dl>
+						<dl>
+							<dt class="sub3_2"><p>DB 조회</p></dt>
+							<dd>
+								<ul>
+									<li class="sub3_2_1"><a href="주소입력">DB 조회 방법</a></li>
+									<li class="sub3_2_2"><a href="주소입력">DB 조회페이지</a></li>
+								</ul>									
+							</dd>		
+						</dl>	
 					</div>
-				</li>
+				</div>
+			</li>
+
+			<!-- 메뉴5 C조소개-->
 			<li class=""><a href="https://aminoragit.github.io/websitegroupc/index.html">C조에 대하여</a></li></ul>
 
 
 
-				<div class="samenu1">
-					<a href="#"><img src="./index_files/image/all_btn1.gif" alt="전체 메뉴 보기"></a>
-					<div class="mgnbs-div3" style="display: block;width: 1080px;">
-						<div class="section-sitemap">
-							<ul class="sitemap-d1 s1">
-								<li><a href="machine_learning">머신러닝/딥러닝</a>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="#">머신러닝</a>
-											<ul class="sitemap-d3">
-												<li><a href="주소입력1_1">RNN</a></li>
-												<li><a href="주소입력1_2">RNN</a></li>
-												<li><a href="주소입력1_3">RNN</a></li>
-												<li><a href="주소입력1_4">RNN</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="딥러닝 주소 입력 바람">딥러닝</a>
-											<ul class="sitemap-d3">
-												<li><a href="주소입력2_1">Dense</a></li>
-												<li><a href="주소입력2_2">Dense</a></li>
-												</ul>
-											</li>
-									</ul></li></ul>
+		<div class="samenu1">
+			<a href="#"><img src="./index_files/image/all_btn1.gif" alt="전체 메뉴 보기"></a>
+				<div class="mgnbs-div3" style="display: block;width: 1080px;">
+					<div class="section-sitemap">
+
+						<!--<ul>마다 samenu의 상위 메뉴를 담당한다.-->
+						<ul class="sitemap-d1 s1">
+							<!--<li>는 해당 페이지의 base.html로 연결됨-->
+							<li><a href="machine_learning">머신러닝/딥러닝</a>
+								<!-- <ul .sitemap-d2>==하위 메뉴 -->
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝</a>
+										<!-- <ul .sitemap-d3>==최하위 메뉴-->
+										<ul class="sitemap-d3">
+											<li><a href="주소입력1_1">RNN</a></li>
+											<li><a href="주소입력1_2">RNN</a></li>
+											<li><a href="주소입력1_3">RNN</a></li>
+											<li><a href="주소입력1_4">RNN</a></li>
+										</ul>
+									</li>
+								</ul>
+
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="딥러닝 주소 입력 바람">딥러닝</a>
+										<ul class="sitemap-d3">
+											<li><a href="주소입력2_1">Dense</a></li>
+											<li><a href="주소입력2_2">Dense</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
 
 
-							<ul class="sitemap-d1 s2">
-								<li><a href="데이터셋 사이트 주소">데이터셋 사이트</a>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="">공공데이터 포털 추천</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://www.data.go.kr/">공공데이터 포털</a></li>
-												<li><a href="http://data.seoul.go.kr/">서울 데이터 센터</a></li>
-												<li><a href="https://developers.naver.com/main/">네이버 Open API</a></li>
-												<li><a href="https://developers.kakao.com/">카카오 Open API</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="">기상자료 데이터 포털</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
-												<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="">공모전/데이터</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://dacon.io/">데이콘</a></li>
-												<li><a href="https://www.kaggle.com/">Kaggle</a></li>
-												<li><a href="https://www.wevity.com/">WEVITY</a></li>
-												<li><a href="https://www.all-con.co.kr/">allcontest</a></li>
-												<li><a href="https://www.thinkcontest.com/">씽굿</a></li>
-												</ul>
-											</li>
-									</ul>
+						<ul class="sitemap-d1 s2">
+							<li><a href="데이터셋 사이트 주소">데이터셋 사이트</a>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="">공공데이터 포털 추천</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://www.data.go.kr/">공공데이터 포털</a></li>
+											<li><a href="http://data.seoul.go.kr/">서울 데이터 센터</a></li>
+											<li><a href="https://developers.naver.com/main/">네이버 Open API</a></li>
+											<li><a href="https://developers.kakao.com/">카카오 Open API</a></li>
+										</ul>
 									</li>
-							</ul>
-							<ul class="sitemap-d1 s3">
-								<li><a href="mysql사이트주소">MYSQL</a>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="">전처리 데이터</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">대한민국 해양 오염정도</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">쓰레기 수거업체 일일수거량</a></li>
-												</ul>
-											</li>
-									</ul>
-									<ul class="sitemap-d2">
-										<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회</a>
-											<ul class="sitemap-d3">
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회 방법</a></li>
-												<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" >DB조회 페이지</a></li>
-												</ul>
-											</li>
-									</ul>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="">기상자료 데이터 포털</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
+											<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
+										</ul>
 									</li>
-							</ul>
-							<ul class="sitemap-d1 s4">
-								<li><a href="https://aminoragit.github.io/websitegroupc/index.html">C조소개</a>
-									</li></ul>
-							</div>
-					</div>	
-				</div>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="">공모전/데이터</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://dacon.io/">데이콘</a></li>
+											<li><a href="https://www.kaggle.com/">Kaggle</a></li>
+											<li><a href="https://www.wevity.com/">WEVITY</a></li>
+											<li><a href="https://www.all-con.co.kr/">allcontest</a></li>
+											<li><a href="https://www.thinkcontest.com/">씽굿</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+
+						<ul class="sitemap-d1 s3">
+							<li><a href="mysql사이트주소">MYSQL</a>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="">전처리 데이터</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">대한민국 해양 오염정도</a></li>
+											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">쓰레기 수거업체 일일수거량</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#">DB조회 방법</a></li>
+											<li><a href="https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro#" >DB조회 페이지</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<ul class="sitemap-d1 s4">
+							<li><a href="https://aminoragit.github.io/websitegroupc/index.html">C조소개</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>	
+			</div>
 			<div class="clear">
 			</div>
 		</div>
 	</div>
-	<!-- //gnb -->	
+	<!-- gnb -->
 		
 <!-- End:Header Area -->
 		<!-- Start:Body Area -->
