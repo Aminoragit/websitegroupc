@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', e => {
 								<ul class="sitemap-d2">
 									<li class="has-child"><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터</a>
 										<ul class="sitemap-d3">
-											<li><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터 다운로드</a></li>
+											<li><a href="https://aminoragit.github.io/websitegroupc/html/data_download.html">전처리 데이터 다운로드</a></li>
 										</ul>
 									</li>
 								</ul>

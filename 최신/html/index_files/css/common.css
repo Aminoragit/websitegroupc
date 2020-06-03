@@ -1,0 +1,234 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NanumGothic-Regular.eot);
+  src: url(../fonts/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumGothic-Regular.woff2) format('woff2'),
+       url(../fonts/NanumGothic-Regular.woff) format('woff'),
+       url(../fonts/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/NanumGothic-Bold.eot);
+  src: url(../fonts/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumGothic-Bold.woff2) format('woff2'),
+       url(../fonts/NanumGothic-Bold.woff) format('woff'),
+       url(../fonts/NanumGothic-Bold.ttf) format('truetype');
+}
+
+@font-face {
+     font-family: 'NanumSquare';
+     font-style: normal;
+     font-weight: 400;
+     src: url(../fonts/NanumSquareR.eot);
+     src: url(../fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+          url(../fonts/NanumSquareR.woff2) format('woff2'),
+          url(../fonts/NanumSquareR.woff) format('woff'),
+          url(../fonts/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+     font-family: 'NanumSquare';
+     font-style: normal;
+     font-weight: 700;
+     src: url(../fonts/NanumSquareB.eot);
+     src: url(../fonts/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+          url(../fonts/NanumSquareB.woff2) format('woff2'),
+          url(../fonts/NanumSquareB.woff) format('woff'),
+          url(../fonts/NanumSquareB.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-weight: 400;
+ src: url(NanumBarunGothic.eot);
+ src: url(NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+      url(NanumBarunGothic.woff) format('woff'),
+      url(NanumBarunGothic.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBarunGothic_bold';
+ font-weight: 700;
+ src: url(NanumBarunGothicBold.eot);
+ src: url(NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+      url(NanumBarunGothicBold.woff) format('woff'),
+      url(NanumBarunGothicBold.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-weight: 300;
+ src: url(NanumBarunGothicLight.eot);
+ src: url(NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+      url(NanumBarunGothicLight.woff) format('woff'),
+      url(NanumBarunGothicLight.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-weight: 200;
+ src: url(NanumBarunGothicUltraLight.eot);
+ src: url(NanumBarunGothicUltraLight.eot?#iefix) format('embedded-opentype'),
+      url(NanumBarunGothicUltraLight.woff) format('woff'),
+      url(NanumBarunGothicUltraLight.ttf) format('truetype');
+}
+
+/* * Noto Sans KR (korean) http://www.google.com/fonts/earlyaccess */
+
+/* @font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/NotoSans-Bold.eot);
+    src:url(../fonts/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/NotoSans-Bold.woff) format('woff'),
+    url(../fonts/NotoSans-Bold.otf) format('opentype');
+}
+ */
+@font-face {
+font-family:'Noto Sans KR';
+font-style:normal;
+font-weight:300;
+src:url(../fonts/NotoSansKR-Light.woff2) format('woff2'),
+	url(../fonts/NotoSansKR-Light.woff) format('woff'),
+	url(../fonts/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+font-family:'Noto Sans KR';
+font-style:normal;
+font-weight:400;
+src:url(../fonts/NotoSansKR-Regular.woff2) format('woff2'),
+	url(../fonts/NotoSansKR-Regular.woff) format('woff'),
+	url(../fonts/NotoSansKR-Regular.otf) format('opentype');
+}
+@font-face {
+font-family:'Noto Sans KR';
+font-style:normal;
+font-weight:500;
+src:url(../fonts/NotoSansKR-Medium.woff2) format('woff2'),
+	url(../fonts/NotoSansKR-Medium.woff) format('woff'),
+	url(../fonts/NotoSansKR-Medium.otf) format('opentype');
+}
+@font-face {
+font-family:'Noto Sans KR_bold';
+font-style:normal;
+font-weight:700;
+src:url(../fonts/NotoSansKR-Bold.woff2) format('woff2'),
+	url(../fonts/NotoSansKR-Bold.woff) format('woff'),
+	url(../fonts/NotoSansKR-Bold.otf) format('opentype');
+}
+
+
+/* base style */
+body,div,dl,dt,dd,ul,ol,li,pre,code,fieldset,legend,input,button,textarea,p,blockquote,th,td,select{font-size:15px; line-height:1.428571429; color:#17171c}
+@media (min-width: 768px) {
+   body,div,dl,dt,dd,ul,ol,li,pre,code,fieldset,legend,input,button,textarea,p,blockquote,th,td,select{font-family:Noto Sans KR,'Nanum Gothic',Dotum,AppleGothic,Helvetica,sans-serif;}
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+html{font-family:Noto Sans KR;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
+
+[hidden],template{display:none}
+a{background-color:transparent;text-decoration:none; font-weight:inherit; box-sizing: border-box;}
+a:active{outline:0;text-decoration:none; font-weight:inherit; box-sizing: border-box; cursor:pointer; transition: all 0.4s ease-out; -ms-transition: all 0.4s ease-out; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out;}
+a:hover{ cursor:pointer; transition: all 0.4s ease-out; -ms-transition: all 0.4s ease-out; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; }
+
+
+/* :hover{ transition: all 0.4s ease-out; -ms-transition: all 0.4s ease-out; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; } */
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{height:0;box-sizing:content-box}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{margin:0;font:inherit;color:inherit}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+
+fieldset{margin:0 2px;padding:.35em .625em .75em;border:1px solid #c0c0c0}
+legend{padding:0;border:0}
+
+optgroup{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+
+fieldset,img,iframe{border:0 none}
+img{vertical-align:middle}
+textarea{resize:none}
+em,address{font-style:normal}
+a{color:#2f2f33;text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none}
+menu,li{list-style:none}
+button{margin:0;padding:0;border:0;vertical-align:middle;cursor:pointer}
+caption{visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0}
+ul,ol,li,dl,dt,dd{list-style:none}
+i,em,address{font-style:normal}
+label{}
+table{border-collapse:collapse;border-spacing:0}
+address,cite,em{font-style:normal}
+a:link,a:active{color:#232329;text-decoration:none}
+a:visited{color:#232329;text-decoration:none}
+a:hover{color:#007eff;text-decoration:none}
+#txtStnNm {border:solid 1px #dcdcdc}
+
+
+/* default class */
+.hide{display:none !important}
+.show{display:block !important}
+.invisible{visibility:hidden}
+.hidden{display:none !important;visibility:hidden !important}
+.blind,.access-hide,legend{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.bd-none{border:none !important}
+.bg-none{background:none !important}
+.text-hide{border:0;background-color:transparent;font-size:0; color:transparent;text-shadow:none}
+
+.tc,.text-center{text-align:center !important}
+.tl,.text-left{text-align:left !important}
+.tr,.text-right{text-align:right !important}
+.text-justify{text-align:justify !important}
+.text-nowrap{white-space:nowrap !important}
+.fl,.float-left{float:left !important}
+.fr,.float-right{float:right !important}
+.clear{clear:both !important}
+.img-responsive,.thumbnail > img,
+.thumbnail a > img,
+.board-detail-content img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{display:block;max-width:100%;height:auto}
+
+
+/* typography */
+.nanum400{font-family:NanumGothic,'Nanum Gothic';font-weight:400}
+.nanum700{font-family:NanumGothic,'Nanum Gothic';font-weight:700}
+.nanum800{font-family:NanumGothic,'Nanum Gothic';font-weight:800}
+.b{font-weight:700;font-weight:bold}
+.bb{font-weight:800}
+
+/* top logo box*/
+.top_area {border-bottom:solid 1px #d9d9d9; padding:3px 0px;}
+.top_area dl.logo_box {width:1070px; margin:0 auto;}
+.top_area dl.logo_box {overflow:hidden;}
+.top_area dl.logo_box dt {float:left;}
+.top_area dl.logo_box dt h1, .top_area dl.logo_box dt h2 {float:left;}
+.top_area dl.logo_box dt h2 {margin-left:10px;}
+.top_area dl.logo_box dd {float:right;}
+.top_area dl.logo_box dd ul {overflow:hidden; margin-top:8px;}
+.top_area dl.logo_box dd ul li:first-child {background:none;}
+
+.top_area dl.logo_box dd ul li a {color:#52525a;}
+.fixbtn {position:static; margin:0px;}

@@ -27,6 +27,65 @@
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
+<style>
+	.showcontents {
+		display: inline-block;
+	}
+	
+	.manImg {
+  		display: none;
+	}
+	.hover-text:hover ~ .manImg {
+  		display: block;  
+	}
+	.btncsv {
+ 		background-color: DodgerBlue;
+ 		border: none;
+ 		color: white;
+  		cursor: pointer;
+  		font-size: 15px;
+		width: 150px;
+		height: 30px;
+	}
+
+	.btncsv:hover {
+		background-color: RoyalBlue;
+	}
+</style>
+
+<style>
+	table.type09 tbody tr #dbcontent{
+    background: #f3f2f7;
+
+}
+	table.type09 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+
+}
+table.type09 thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+}
+table.type09 tbody th {
+    width: 20%;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f9f7;
+}
+table.type09 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+</style>
 <style type="text/css">
 #loading-mask {
     position:absolute;
@@ -345,13 +404,49 @@ hr {
 	</div>
 
 	<div id="content" class="sub">
+		<br/>
 		<div class="content-head" style="margin-left: 250px;">
-			<h2>DB 조회방법</h2>
+			<h2>전처리 데이터 다운로드</h2>
 		</div>
 	</div>
 
+	<br/>	
 	<div id="content2" class="sub2">
-		<p> DB 조회방법</p>
+	<table class="type09" style="margin-left: 2%;">
+    <thead>
+    <tr>
+        <th scope="cols">DB Name</th>
+        <th scope="cols">Contents</th>
+        <th scope="cols">Date.</th>
+        <th scope="cols">미리보기</th>
+        <th scope="cols">Download</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">항목명</th>
+        <td id="dbcontent">내용이 들어갑니다.</td>
+        <td>날짜1</td>
+        <td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
+        <td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button></td>
+
+    </tr>
+    <tr>
+        <th scope="row">항목명</th>
+        <td id="dbcontent">내용이 들어갑니다.</td>
+        <td>날짜1</td>
+        <td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
+        <td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button></td>
+    </tr>
+    <tr>
+        <th scope="row">항목명</th>
+        <td id="dbcontent">내용이 들어갑니다.</td>
+        <td>날짜1</td>
+        <td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
+        <td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button></td>
+    </tr>
+    </tbody>
+</table>
 		
 	</div>
 </div>
@@ -359,4 +454,4 @@ hr {
 <div class="clear">
 </div>
 </body>
-<>
+</html>

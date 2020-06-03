@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/TJOEUN-JR/Desktop/machine_learning.html -->
+<html lang="ko-KR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>BAWS(Bigdata Analytics Web Service)</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="shortcut icon" href="./index_files/image/icon.jpg">
+<link rel="stylesheet" type="text/css" href="./index_files/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="./index_files/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" type="text/css" href="./index_files/css/common-ui.css" media="all">
+<link rel="stylesheet" type="text/css" href="./index_files/css/jquery.bxslider.css" media="all">
+<link rel="stylesheet" type="text/css" href="./index_files/css/zTreeStyle.css">
+<link rel="stylesheet" type="text/css" href="./index_files/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="./index_files/css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="./index_files/css/layout.css" media="all">
+<script type="text/javascript" src="./index_files/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="./index_files/js/common.js"></script>
+<script type="text/javascript" src="./index_files/js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="./index_files/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="./index_files/js/browser.js"></script>
+<script type="text/javascript" src="./index_files/js/menu.js"></script>
+<script type="text/javascript" src="./index_files/js/messages.js"></script>
+<script type="text/javascript" src="./index_files/js/gdsUtil.js"></script>
+<script type="text/javascript" src="./index_files/js/custom.js"></script>
+<script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
+</head>
+<body>
+	<!--AOS 효과를 사용하기 위한 script head에 작성하면 동작하지 않으니 주의 할것-->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>AOS.init();</script>
+<div id="mwrap">
+	<div class="top_area">
+		<dl class="logo_box">
+			<dt>
+				<h1 class="logo">
+					<a href="https://aminoragit.github.io/websitegroupc/index.html" class="gov_logo1"><img src="./index_files/image/icon.jpg" alt="C조 홈페이지" width="50" height="50" style="width: 30px; height: 30px;"></a>
+				</h1>
+			</dt>
+		</dl>
+	</div>
+	
+<script type="text/javascript">
+	var moveURLFlag = false;
+	var moveURL = '';
+	$(document).ready(function () {
+		changeFontSize();
+		$("form").each(function(){
+			addFontSizeToFormOnsubmit($(this).attr("id"));
+	});
+	
+	var GDSsessionExpireTime;
+});
+</script>
+
+<!-- samenu1의 ul .has-child 마우스 올려놓을때 메뉴확장 --><!---->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".sitemap-d2 li").mouseover(function(){
+		$(this).find(".sitemap-d3").show();
+		$(this).addClass("on");
+		});
+		
+		$(".sitemap-d2 li").mouseout(function(){
+			$(this).find(".sitemap-d3").hide();
+			$(this).removeClass("on");
+		});	
+	});
+</script>
+
+	
+<!-- header 부분-->
+<div id="header" class="main-header">
+	<div class="mheader_wrap" style="padding-top: 50px;height: 100px;padding-bottom: 50px;">
+	<div class="main_titl1">
+		<p style="margin-left: 250px;">더조은 아카데미</p>
+		<h3 style="padding-top: 0px; padding-left: 0px; padding-right: 20px;">
+			<strong style="padding-top: 0px;">C조</strong> 
+			수질 오염 예측모델
+		</h3>
+	</div>
+	</div>
+</div>
+	
+<!--메인 메뉴 부분-->	
+<div class="mgnb-wrap">
+	<div class="mgnb-areas">
+		<ul class="mgnbs" style="width: 1000px; padding-left: 0px;">
+
+			<!--<li>마다 메뉴가 1개씩 있으며 하위 메뉴<dt>와 최하위 메뉴<dd->ul->li>로 구성되어 있다.-->
+			<!--메뉴1 예측모델 구상 목표-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8%EB%AA%A9%ED%91%9C.html">예측모델 구상 목표</a></li>
+
+			<!--메뉴2 머신러닝 딥러닝-->
+			<li class=""><a href="http://아이피/knn">머신러닝 딥러닝</a>
+				<div class="mgnbs-div">	
+					<dl>
+						<dt class="sub1_1"><p>머신러닝</p></dt>
+						<dd>
+							<ul>
+								<li class="sub1_1_1"><a href="http://아이피/knn">Knn</a></li>
+								<li class="sub1_1_2"><a href="http://아이피/kmeans">K-Means</a></li>
+								<li class="sub1_1_3"><a href="http://아이피/tree">DecisionTree</a></li>
+								<li class="sub1_1_4"><a href="http://아이피/r_forest">R_Forest</a></li>
+								<li class="sub1_1_5"><a href="http://아이피/Gradient">Gradient</a></li>
+							</ul>									
+						</dd>		
+					</dl>
+					<dl>
+						<dt class="sub1_11"><p>딥러닝[Keras]</p>	</dt>
+						<dd>
+							<ul>
+								<li class="sub1_1_1"><a href="http://아이피/keras">Keras(Dense)</a></li>
+								
+								</ul>									
+						</dd>		
+					</dl>
+				</div>
+			</li>
+			
+			<!--메뉴3 데이터셋 사이트-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">데이터셋 사이트</a>
+				<div class="mgnbs-div">
+					<dl>
+						<dt class="sub2_1" style="margin-bottom: 10px;"><p>공공데이터포털 추천</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_1_1"><a href="https://www.data.go.kr/">공공 데이터 포털</a></li>
+								<li class="sub2_1_2"><a href="http://data.seoul.go.kr/">서울 열린 데이터 광장</a></li>
+								<li class="sub2_1_3"><a href="https://developers.naver.com/main/">네이버 Open API </a></li>
+								<li class="sub2_1_4"><a href="https://developers.kakao.com/">카카오 Open API </a></li>
+							</ul>									
+						</dd>
+					</dl>
+					<dl>
+						<dt class="sub2_2" style="margin-bottom: 10px;"><p>기상자료 데이터 포털</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_2_1"><a href="https://data.kma.go.kr/">기상청 기상자료데이터</a></li>
+								<li class="sub2_2_2"><a href="https://bd.kma.go.kr/kma2019/svc/main.do" >날씨마루</a></li>
+								</ul>									
+						</dd>
+					</dl>
+					<dl>
+						<dt class="sub2_3" style="margin-bottom: 10px;"><p>공모전/데이터</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_3_1"><a href="https://dacon.io/">데이콘</a></li>
+								<li class="sub2_3_2"><a href="https://www.kaggle.com/">Kaggle</a></li>
+								<li class="sub2_3_3"><a href="https://www.wevity.com/">WEVITY</a></li>
+								<li class="sub2_3_4"><a href="https://www.all-con.co.kr/page/uni_contest.php">allcontest</a></li>
+								<li class="sub2_3_5"><a href="https://www.thinkcontest.com/">씽굿</a></li>
+							</ul>									
+						</dd>
+					</dl>
+				</div>
+			</li>
+										
+			<!--메뉴4 MySQL-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/html/data_download.html">MySQL</a>
+				<div class="mgnbs-div">
+					<div class="mgnbs-div2">
+						<dl>
+							<dt class="sub3_1"><p>DB 조회</p></dt>
+							<dd>
+								<ul>
+									<li class="sub3_2_1"><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">DB 조회 방법</a></li>
+									<li class="sub3_2_2"><a href="http://groupc.dothome.co.kr/mysql.php">DB 조회 페이지</a></li>
+								</ul>									
+							</dd>		
+						</dl>	
+						<dl style="height: 150px;width: 250px;">
+						<dt class="sub3_2" style="margin-bottom: 10px;"><p>전처리 데이터</p></dt>
+						<dd>
+							<ul>
+								<li class="sub3_1_1"><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터 다운로드</a></li>
+							</ul>									
+						</dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+
+			<!-- 메뉴5 C조소개-->
+			<li class=""><a href="https://aminoragit.github.io/websitegroupc/index.html">C조에 대하여</a></li></ul>
+
+
+
+		<div class="samenu1">
+			<a href="#"><img src="./index_files/image/all_btn1.gif" alt="전체 메뉴 보기"></a>
+				<div class="mgnbs-div3" style="display: block;width: 1080px;">
+					<div class="section-sitemap">
+
+						<!--<ul>마다 samenu의 상위 메뉴를 담당한다.-->
+						<ul class="sitemap-d1 s1">
+							<!--<li>는 해당 페이지의 base.html로 연결됨-->
+							<li><a href="https://aminoragit.github.io/websitegroupc/html/machine_learning.html">머신러닝/딥러닝</a>
+								<!-- <ul .sitemap-d2>==하위 메뉴 -->
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://아이피/knn">머신러닝</a>
+										<!-- <ul .sitemap-d3>==최하위 메뉴-->
+										<ul class="sitemap-d3">
+											<li><a href="http://아이피//knn">KNN</a></li>
+											<li><a href="http://아이피//kmeans">K-Means</a></li>
+											<li><a href="http://아이피//tree">DecisionTree</a></li>
+											<li><a href="http://아이피//r_forest">R_Forest</a></li>
+											<li><a href="http://아이피//Gradient">Gradient</a></li>
+										</ul>
+									</li>
+								</ul>
+
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://아이피/keras">딥러닝</a>
+										<ul class="sitemap-d3">
+											<li><a href="http://아이피//keras">Keras(Dense)</a></li>
+											
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+
+						<ul class="sitemap-d1 s2">
+							<li><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">데이터셋 사이트</a>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">공공데이터 포털 추천</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://www.data.go.kr/">공공데이터 포털</a></li>
+											<li><a href="http://data.seoul.go.kr/">서울 데이터 센터</a></li>
+											<li><a href="https://developers.naver.com/main/">네이버 Open API</a></li>
+											<li><a href="https://developers.kakao.com/">카카오 Open API</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">기상자료 데이터 포털</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
+											<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">공모전/데이터</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://dacon.io/">데이콘</a></li>
+											<li><a href="https://www.kaggle.com/">Kaggle</a></li>
+											<li><a href="https://www.wevity.com/">WEVITY</a></li>
+											<li><a href="https://www.all-con.co.kr/">allcontest</a></li>
+											<li><a href="https://www.thinkcontest.com/">씽굿</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+
+						<ul class="sitemap-d1 s3">
+							<li><a href="http://groupc.dothome.co.kr/mysql.php">MYSQL</a>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터</a>
+										<ul class="sitemap-d3">
+											<li><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터 다운로드</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/mysql.php">DB조회</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://aminoragit.github.io/websitegroupc/html/Mysql.html">DB조회 방법</a></li>
+											<li><a href="http://groupc.dothome.co.kr/mysql.php" >DB조회 페이지</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<ul class="sitemap-d1 s4">
+							<li><a href="https://aminoragit.github.io/websitegroupc/index.html">C조소개</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>	
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<!-- gnb -->
+		
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("body").removeClass();
+	});
+</script>
+		
+<div id="container" class="intro" style="width: 1070px;">
+	<div>
+
+		<div class="intro_container"><!-- 콘트롤타워 -->
+		<div class="intro_box1">
+			<div class="intro_wrap1" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">
+				<dl class="intro_cont1" >
+				<dt>
+					<img alt="더 조은 아카데미" src="./index_files/image/intro_cotit1.png" style="border-top-width: 80px;margin-top: 100px;width: 400px;margin-left: 60px;">
+				</dt>
+				<dd>
+				<ul>
+					<li><p><strong class="fb_titl1">생명의 근원인 바다는</strong></p>
+						<p>모든 생물체가 생존하는데 없어서는 안될 존재입니다.</p>
+						<p>지구 표면의 70%는 바다이며, 모든 생물의 80%는 바다에서 삽니다</p>
+						<p>기후자료를 잘 알고 활용하면 더 많은 혜택과 이익을 거둘 수 있습니다.</p>
+					</li>
+					<li><p><strong class="fb_titl1">C조에서는</strong></p>
+						<p>공공데이터센터와 기타 데이터셋 제공 사이트의 다양한 자료를 토대로</p>
+						<p>해양쓰레기와 폐기물들이 얼마나 지구 수질을 오염시키는지</p>
+						<p>빅데이터 분석을 통해 알아보고자 합니다</p>
+						<p></p>
+					</li>
+					<li><p><strong class="fb_titl1">또한 </strong></p>
+						<p>통계처리를 통해 버려지는 폐기물의 양과 수질을 예측하는 모델을 만들어서</p>
+						<p>폐기물 수거업체의 효율적인 업무를 지원하는 모델을 제공할 것입니다</p>
+					</li>
+				</ul>
+				</dd>
+				</dl>
+			</div>
+		</div>
+
+<div class="ints_wraps1">
+<div class="intro_box2">
+<div class="intro_wrap2" data-aos="flip-right" data-aos-anchor-placement="top-center" data-aos-duration="2000">
+<h4 class="int_titl1" style="
+    margin-right: 0px;
+    margin-left: 120px;
+    width: 300px;
+    margin-bottom: 0px;
+"><span class="fn_titl1">폐기물과 수질오염 상관관계 예측</span><span class="btt_line"></span>
+</h4>
+
+<!--상관관계 그림파일-->
+<div class="int_cont2"><img alt="자료관리" src="./index_files/image/intro_grp1.png" style="width: 500px;height: 500px;"></div>
+</div>
+</div>
+
+<!--intro_box3=주요특성-->
+<div class="intro_box3">
+	<div class="intro_wrap3"data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-duration="2000">
+	<h4 class="int_titl1"><span class="fn_titl1">주요 특성</span><span class="btt_line"> </span></h4>
+
+	<div class="intro_cont3">
+		<dl>
+		<dt><strong>B</strong>igData</dt>
+			<dd>· 1일 폐기되는 쓰레기 양 분석을 위한 데이터셋</dd>
+			<dd>· 방대한 실제 공공시설 데이터셋 제공</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>P</strong>latform</dt>
+			<dd>· 개인 서버, 실제 사용가능한 웹 사이트 사용법 제공</dd>
+			<dd>· 프로젝트 진행 과정 소개</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>A</strong>pplication</dt>
+			<dd>· 호환성·응용성 구현의 사용자중심의 맞춤형 분석기능 솔루션 제공</dd>
+			<dd>· 머신러닝/딥러닝 분석결과를 실시간으로 사용자에게 제공</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>E</strong>asy</dt>
+			<dd>· 외부 웹사이트 연결 및 데이터 제공 포털 추천</dd>
+			<dd>· 전처리가 완료된 데이터 제공</dd>
+		</dl>
+	</div>
+</div>
+</div>
+</div>
+
+
+<div class="intro_box4">
+	<div class="intro_wrap4">
+	<hr>
+	<h6><strong>더 조은 아카데미</strong></h6>
+	
+	<p>&nbsp;</p>
+	
+	<dl>
+		<dt><ins>주소 안내</ins></dt>
+		<dd>
+			<ul>
+				<li><a href="https://map.naver.com/v5/search?c=14136207.4297446,4518771.7673551,19,0,0,0,dh">서울특별시 종로구 삼일대로 385-1, 동일빌딩 5층(관철동)</a></li>
+			</ul>
+		</dd>
+	</dl>
+	
+	<p>&nbsp;</p>
+	
+	<dl>
+		<dt><ins>지하철 이용안내</ins></dt>
+		<dd>
+			<ul>
+				<li class="green"><a href="https://map.naver.com/v5/search/3%ED%98%B8%EC%84%A0%20%EC%A2%85%EA%B0%81%EC%97%AD/place/21406517?c=14135987.5239972,4518794.3849524,17,0,0,0,dh">1호선 종각역 4번출구</a></li>
+				<li class="green"><a href="https://map.naver.com/v5/search/3%ED%98%B8%EC%84%A0%20%EC%A2%85%EA%B0%81%EC%97%AD/place/21405265?c=14136366.7233172,4518831.4091379,17,0,0,0,dh">1,3호선 종로3가역 15번출구</a></li>
+			</ul>
+		</dd>
+	</dl>
+	
+	<p>&nbsp;</p>
+
+	<dl>
+		<dt><ins>버스 이용안내</ins></dt>
+		<dd>
+			<ul>
+				<li><a href="https://map.naver.com/v5/entry/bus-station/104996?c=14136207.4297446,4518771.7673551,19,0,0,0,dh">종로2가 사거리 - 470번,741번,N37번,5007번</a></li>
+			</ul>
+		</dd>
+	</dl>
+	
+	<p>&nbsp;</p>
+
+</div>
+</div>
+</div>
+</div>
+	
+<div class="clear"></div>
+</div>
+</body>
+</html>
