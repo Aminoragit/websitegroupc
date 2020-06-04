@@ -16,9 +16,6 @@
 <link rel="stylesheet" type="text/css" href="./index_files/css/main.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/layout.css" media="all">
 <script type="text/javascript" src="./index_files/js/jquery-2.1.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script>var ctx = document.getElementById('myChart');
-</script>
 <script type="text/javascript" src="./index_files/js/common.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.scrollTo.js"></script>
 <script type="text/javascript" src="./index_files/js/TweenMax.min.js"></script>
@@ -704,10 +701,8 @@ document.addEventListener('DOMContentLoaded', e => {
 	</div>
 
 	<br/>	
-	<div id="content2" class="sub2">
-		<canvas id="myChart"></canvas>
-<script> var ctx = document.getElementById('myChart'); var myChart = new Chart(ctx, { type: 'bar', data: { labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], datasets: [{ label: '# of Votes', data: [12, 19, 3, 5, 2, 3], backgroundColor: [ 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)' ], borderColor: [ 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)' ], borderWidth: 1 }] }, options: { scales: { yAxes: [{ ticks: { beginAtZero: true } }] } } }); </script>
-
+	<div id="content2" class="sub2" >
+		
 <?php
 				$db_host = "localhost"; 
 				$db_user = "groupc"; 
@@ -723,15 +718,16 @@ document.addEventListener('DOMContentLoaded', e => {
 
 	<h1>사용할 데이터 출력</h1>
     
-    <table class="bsearch" border="1">
+    
     <h4>MySQL에 저장된 데이터는 아래와 같습니다.<br/>
     	<button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button>
 		
 		<button type='button' class="btncsv" id="csvDownloadButton"><i class="fa fa-download"></i>검색한 csv 다운로드</button>
     </h4>
     <!--입력값으로 검색하기-->
-	<form method="POST" action="mysqltest.php">
-		<div slider id="slider-distance">
+	<form method="POST" action="mysqltest.php" >
+    <div id="input_area" style="border: 5px solid gold">
+		<div slider id="slider-distance" >
 			<div>
 				<div inverse-left style="width:70%;"></div>
 				<div inverse-right style="width:70%;"></div>
@@ -775,13 +771,13 @@ document.addEventListener('DOMContentLoaded', e => {
             <option value="201702">201702</option>
           </select>
   			<div id="slider-range" style="width: 500px;"></div>	
-		
+		</div>
 		<input type="submit" name="submit"/> 
 
 		
   		<!--입력한 검색조건 php로 전달하기-->
 	</form>
-	</table>
+	
 
 
 	<?php
