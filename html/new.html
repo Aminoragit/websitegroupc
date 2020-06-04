@@ -1,0 +1,25 @@
+<table class="bsearch" border="1">
+    <h4>MySQL에 저장된 데이터는 아래와 같습니다.<br/>
+    	<button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button>
+		
+		<button type='button' class="btncsv" id="csvDownloadButton"><i class="fa fa-download"></i>검색한 csv 다운로드</button>
+    </h4>
+    <!--입력값으로 검색하기-->
+	<form method="POST" action="testsql.php">
+		
+			년월: <input type="text" name="YEAR" placeholder="201702"/><br/>   
+  		표층수온 : <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="slide-value" /><br/>
+  		 <select name="taskOption">
+            <option value="201507">201507</option>
+            <option value="201702">201702</option>
+          </select>
+			<input type="hidden" id="min" value="0" name='min'/>
+			<input type="hidden" id="max" value="300"name='max' />
+  			<div id="slider-range" style="width: 500px;"></div>	
+		
+		<input type="submit" name="submit"/> 
+
+		
+  		<!--입력한 검색조건 php로 전달하기-->
+	</form>
+	</table>

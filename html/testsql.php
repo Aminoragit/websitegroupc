@@ -11,13 +11,13 @@
 <link rel="stylesheet" type="text/css" href="./index_files/css/common.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/font-awesome.min.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/common-ui.css" media="all">
-
+<link rel="stylesheet" type="text/css" href="./index_files/css/jquery.bxslider.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/zTreeStyle.css">
 <link rel="stylesheet" type="text/css" href="./index_files/css/sub.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/main.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/layout.css" media="all">
 <script type="text/javascript" src="./index_files/js/jquery-2.1.0.min.js"></script>
-
+<script type="text/javascript" src="./index_files/js/ddlist.jquery.min.js"></script>
 <script type="text/javascript" src="./index_files/js/common.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.scrollTo.js"></script>
 <script type="text/javascript" src="./index_files/js/TweenMax.min.js"></script>
@@ -27,12 +27,7 @@
 <script type="text/javascript" src="./index_files/js/gdsUtil.js"></script>
 <script type="text/javascript" src="./index_files/js/custom.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
-
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+<script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
@@ -79,8 +74,8 @@
   	let $slider = $("#slider-range").slider({ //slider의 구성요소 설정
     		range: true,
 	    	min: 0,
-	    	max: 100,
-    		values: [0, 100],
+	    	max: 30,
+    		values: [0, 30],
     		slide: function(event, ui) {
      			$amount.val(`값${ui.values[0]} - 값${ui.values[1]}`);
       			$min.val(ui.values[0]);
@@ -176,7 +171,8 @@ document.addEventListener('DOMContentLoaded', e => {
 		changeFontSize();
 		$("form").each(function(){
 			addFontSizeToFormOnsubmit($(this).attr("id"));
-	});	
+	});
+	
 	var GDSsessionExpireTime;});
 </script>
 
@@ -452,13 +448,6 @@ document.addEventListener('DOMContentLoaded', e => {
 		</div>
 	</div>
 
-		
-
-
-
-
-
-
 		<div id="content2" class="sub2" style=" margin-bottom: 60px;">
 			
 			<?php
@@ -470,62 +459,37 @@ document.addEventListener('DOMContentLoaded', e => {
 				if (mysqli_connect_errno($conn)) {
 					echo "데이터베이스 연결 실패: " . mysqli_connect_error();
 				} else {
-				"데이터베이스 연결 성공";
+				echo "데이터베이스 연결 성공";
 				}
 			?>
 
-
-
-
-
-
-
-
-
-
-
 	<h1>사용할 데이터 출력</h1>
     
+    <table class="bsearch" border="1">
     <h4>MySQL에 저장된 데이터는 아래와 같습니다.<br/>
-    	
+    	<button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button>
+		
+		<button type='button' class="btncsv" id="csvDownloadButton"><i class="fa fa-download"></i>검색한 csv 다운로드</button>
     </h4>
     <!--입력값으로 검색하기-->
-
-
-
-
-	<form method="POST" action="mysql.php">
+	<form method="POST" action="testsql.php">
 		
-			생태구역: <input type="text" name="area" placeholder="거진연안"/><br/>   
+			년월: <input type="text" name="YEAR" placeholder="201702"/><br/>   
   		표층수온 : <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="slide-value" /><br/>
-  		 
-  		<select name="taskOption">
-            
+  		 <select name="taskOption">
             <option value="201507">201507</option>
             <option value="201702">201702</option>
-            
-
-
-         </select>
-
+          </select>
 			<input type="hidden" id="min" value="0" name='min'/>
-			<input type="hidden" id="max" value="100"name='max' />
-  			
-
-  			<div id="slider-range" style="width: 500px; height: 20px;"></div>	
+			<input type="hidden" id="max" value="300"name='max' />
+  			<div id="slider-range" style="width: 500px;"></div>	
 		
 		<input type="submit" name="submit"/> 
 
 		
-  			<!--입력한 검색조건 php로 전달하기-->
+  		<!--입력한 검색조건 php로 전달하기-->
 	</form>
-
-
-
-	<button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button>
-	<button type='button' class="btncsv" id="csvDownloadButton"><i class="fa fa-download"></i>검색한 csv 다운로드</button>
-
-
+	</table>
 
 
 	<?php
@@ -533,33 +497,13 @@ document.addEventListener('DOMContentLoaded', e => {
 	 $min_value=(float)$_POST['min']; //표층수온 최소값
 	 $max_value=(float)$_POST['max']; //표층수온 최대값
 	 $year2=(int)$_POST['taskOption'];
-	 $area=$_POST['area'];
 	 echo "년월 : "."$year2"."<br/>";
 	 echo "표층수온 최소값 : ".$min_value."<br/>"; //출력값 확인용
 	 echo "표층수온 최대값 : ".$max_value."<br/>";
 	 
  	 if(!empty( $year2 )){
-        $sql_template = "SELECT * FROM `datatable` WHERE `년월`= %d AND `표층수온`> %f AND `표층수온`<%f AND `생태구역`<%s "; //%d는 정수형,%f는 실수형
- 		$sql2=sprintf($sql_template,$year2,$min_value,$max_value,$area);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        $sql_template = "SELECT * FROM `datatable` WHERE `년월`= %d AND `표층수온`>%f AND `표층수온`<%f"; //%d는 정수형,%f는 실수형
+ 		$sql2=sprintf($sql_template,$year2,$min_value,$max_value);
         $result = mysqli_query($conn,$sql2);
         $row = mysqli_fetch_array($result);
         //csv 다운을 위해 table의 id를 설정해줌(=mytableresult)
