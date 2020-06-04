@@ -495,28 +495,16 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
 	<form method="POST" action="mysql.php">
-		
-			생태구역: <input type="text" name="area" placeholder="거진연안"/><br/>   
-  		표층수온 : <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="slide-value" /><br/>
-  		 
-  		<select name="taskOption">
-            
+		<!-- 생태구역: <input type="text" name="area" placeholder="거진연안"/><br/> -->
+		표층수온: <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="slide-value" /><br/>
+  		<select name="taskOption">            
             <option value="201507">201507</option>
             <option value="201702">201702</option>
-            
-
-
-         </select>
-
+        </select> 
 			<input type="hidden" id="min" value="0" name='min'/>
 			<input type="hidden" id="max" value="100"name='max' />
-  			
-
   			<div id="slider-range" style="width: 500px; height: 20px;"></div>	
-		
-		<input type="submit" name="submit"/> 
-
-		
+		<input type="submit" name="submit"/>		
   			<!--입력한 검색조건 php로 전달하기-->
 	</form>
 
@@ -529,7 +517,6 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
 	<?php
-	 $year=(int)$_POST['YEAR'];
 	 $min_value=(float)$_POST['min']; //표층수온 최소값
 	 $max_value=(float)$_POST['max']; //표층수온 최대값
 	 $year2=(int)$_POST['taskOption'];
@@ -539,8 +526,8 @@ document.addEventListener('DOMContentLoaded', e => {
 	 echo "표층수온 최대값 : ".$max_value."<br/>";
 	 
  	 if(!empty( $year2 )){
-        $sql_template = "SELECT * FROM `datatable` WHERE `년월`= %d AND `표층수온`> %f AND `표층수온`<%f AND `생태구역`<%s "; //%d는 정수형,%f는 실수형
- 		$sql2=sprintf($sql_template,$year2,$min_value,$max_value,$area);
+        $sql_template = "SELECT * FROM `datatable` WHERE `년월`= %d AND `표층수온`> %f AND `표층수온`<%f "; //%d는 정수형,%f는 실수형
+ 		$sql2=sprintf($sql_template,$year2,$min_value,$max_value);
 
 
 
