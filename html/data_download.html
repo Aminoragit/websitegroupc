@@ -56,39 +56,36 @@
 <style>
 	table.type09 tbody tr #dbcontent{
     background: #f3f2f7;
-    width: 30%
+    width: 30%}
 
-}
 	table.type09 {
     border-collapse: collapse;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.5;}
 
-}
-table.type09 thead th {
+	table.type09 thead th {
     padding: 10px;
     font-weight: bold;
     vertical-align: top;
     color: #369;
-    border-bottom: 3px solid #036;
-}
-table.type09 tbody th {
+    border-bottom: 3px solid #036;}
+
+	table.type09 tbody th {
     width: 20%;
     padding: 10px;
     font-weight: bold;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
-    background: #f3f9f7;
-}
-table.type09 td {
+    background: #f3f9f7;}
+	table.type09 td {
     width: 350px;
     padding: 10px;
     vertical-align: top;
-    border-bottom: 1px solid #ccc;
-}
+    border-bottom: 1px solid #ccc;}
 </style>
+
 <style type="text/css">
-#loading-mask {
+	#loading-mask {
     position:absolute;
     top:0;
     left:0;
@@ -96,17 +93,16 @@ table.type09 td {
     opacity:0.80;
     filter:alpha(opacity=80);
     z-index:30000;
-    display:none;
-}
-hr { 
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1px;
-} 
+    display:none;}
+
+	hr { 
+  	display: block;
+  	margin-top: 0.5em;
+  	margin-bottom: 0.5em;
+  	margin-left: auto;
+	margin-right: auto;
+  	border-style: inset;
+  	border-width: 1px;} 
 </style>
 
 </head>
@@ -114,6 +110,26 @@ hr {
 	<!--AOS 효과를 사용하기 위한 script head에 작성하면 동작하지 않으니 주의 할것-->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>AOS.init();</script>
+	<script type="text/javascript">
+		var moveURLFlag = false;
+		var moveURL = '';
+		$(document).ready(function () {
+			changeFontSize();
+			$("form").each(function(){
+				addFontSizeToFormOnsubmit($(this).attr("id"));});
+		var GDSsessionExpireTime;});
+	</script>
+	<!-- samenu1의 ul .has-child 마우스 올려놓을때 메뉴확장 -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".sitemap-d2 li").mouseover(function(){
+			$(this).find(".sitemap-d3").show();
+			$(this).addClass("on");});
+		
+			$(".sitemap-d2 li").mouseout(function(){
+				$(this).find(".sitemap-d3").hide();
+				$(this).removeClass("on");});});
+	</script>
 <div id="mwrap">
 	<div class="top_area">
 		<dl class="logo_box">
@@ -125,33 +141,7 @@ hr {
 		</dl>
 	</div>
 	
-<script type="text/javascript">
-	var moveURLFlag = false;
-	var moveURL = '';
-	$(document).ready(function () {
-		changeFontSize();
-		$("form").each(function(){
-			addFontSizeToFormOnsubmit($(this).attr("id"));
-	});
-	
-	var GDSsessionExpireTime;
-});
-</script>
 
-<!-- samenu1의 ul .has-child 마우스 올려놓을때 메뉴확장 --><!---->
-<script type="text/javascript">
-	$(document).ready(function () {
-		$(".sitemap-d2 li").mouseover(function(){
-		$(this).find(".sitemap-d3").show();
-		$(this).addClass("on");
-		});
-		
-		$(".sitemap-d2 li").mouseout(function(){
-			$(this).find(".sitemap-d3").hide();
-			$(this).removeClass("on");
-		});	
-	});
-</script>
 
 	
 <!-- header 부분-->
@@ -413,45 +403,43 @@ hr {
 
 	<br/>	
 	<div id="content2" class="sub2">
-	<table class="type09" style="margin-left: 2%;">
-    <thead>
-    <tr>
-        <th scope="cols">DB Name</th>
-        <th scope="cols">Contents</th>
-        <th scope="cols">Date.</th>
-        <th scope="cols">미리보기</th>
-        <th scope="cols">Download</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row">원본 데이터UTF8</th>
-        <td id="dbcontent">원본 데이터의 UTF8버전입니다.</td>
-        <td>2020-05-14</td>
-        <td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
-        <td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/datastorage/original_utf8.csv'" class="btncsv"><i class="fa fa-download"></i>다운로드</button></td>
-    </tr>
-    <tr>
-        <th scope="row">원본데이터_R</th>
-        <td id="dbcontent">원본 데이터의 R버전입니다.</td>
-        <td>2020-05-14</td>
-        <td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
-        <td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/datastorage/original.csv'" class="btncsv"><i class="fa fa-download"></i>다운로드</button></td>
-    </tr>
-    <tr>
-        <th scope="row">필수 컬럼데이터</th>
-        <td id="dbcontent">분석에 사용되는 필수 컬럼 데이터입니다.</td>
-        <td>2020-06-01</td>
-        <td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
-        <td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/datastorage/colclean.csv'" class="btncsv"><i class="fa fa-download"></i>다운로드</button></td>
-    </tr>
-    </tbody>
-</table>
-		
+		<table class="type09" style="margin-left: 2%;">
+	    	<thead>
+	   			<tr>
+	        		<th scope="cols">DB Name</th>
+	        		<th scope="cols">Contents</th>
+	        		<th scope="cols">Date.</th>
+	        		<th scope="cols">미리보기</th>
+	        		<th scope="cols">Download</th>
+	    		</tr>
+	    	</thead>
+	   		<tbody>
+	    		<tr>
+	        		<th scope="row">원본 데이터UTF8</th>
+	        		<td id="dbcontent">원본 데이터의 UTF8버전입니다.</td>
+	        		<td>2020-05-14</td>
+	        		<td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
+	        		<td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/datastorage/original_utf8.csv'" class="btncsv"><i class="fa fa-download"></i>다운로드</button></td>
+	    		</tr>
+	    		<tr>
+	        		<th scope="row">원본데이터_R</th>
+	        		<td id="dbcontent">원본 데이터의 R버전입니다.</td>
+	        		<td>2020-05-14</td>
+	        		<td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
+	        				<td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/datastorage/original.csv'" class="btncsv"><i class="fa fa-download"></i>다운로드</button></td>
+	    		</tr>
+	    		<tr>
+	        		<th scope="row">필수 컬럼데이터</th>
+	        		<td id="dbcontent">분석에 사용되는 필수 컬럼 데이터입니다.</td>
+	        		<td>2020-06-01</td>
+	        		<td><span class="showcontents"><p class="hover-text">미리보기</p><img class="manImg" src="./index_files/image/icon.jpg"></span></td>
+	        		<td><button type='button'onclick="location.href='http://groupc.dothome.co.kr/datastorage/colclean.csv'" class="btncsv"><i class="fa fa-download"></i>다운로드</button></td>
+	    		</tr>
+	    	</tbody>
+		</table>
 	</div>
 </div>
 </div>
-<div class="clear">
-</div>
+<div class="clear"></div>
 </body>
 </html>
