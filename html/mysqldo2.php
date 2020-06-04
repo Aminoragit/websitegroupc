@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-<!-- saved from url=(0056)file:///C:/Users/TJOEUN-JR/Desktop/machine_learning.html -->
+
 <html lang="ko-KR">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head><meta http-equiv="Content-Type" content="text; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>BAWS(Bigdata Analytics Web Service)</title>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="shortcut icon" href="./index_files/image/icon.jpg">
 <link rel="stylesheet" type="text/css" href="./index_files/css/common.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/font-awesome.min.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/common-ui.css" media="all">
-
+<link rel="stylesheet" type="text/css" href="./index_files/css/jquery.bxslider.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/zTreeStyle.css">
 <link rel="stylesheet" type="text/css" href="./index_files/css/sub.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/main.css" media="all">
 <link rel="stylesheet" type="text/css" href="./index_files/css/layout.css" media="all">
 <script type="text/javascript" src="./index_files/js/jquery-2.1.0.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>var ctx = document.getElementById('myChart');
+</script>
 <script type="text/javascript" src="./index_files/js/common.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.scrollTo.js"></script>
 <script type="text/javascript" src="./index_files/js/TweenMax.min.js"></script>
 <script type="text/javascript" src="./index_files/js/browser.js"></script>
 <script type="text/javascript" src="./index_files/js/menu.js"></script>
-<script type="text/javascript" src="./index_files/js/messages.js"></script>
 <script type="text/javascript" src="./index_files/js/gdsUtil.js"></script>
 <script type="text/javascript" src="./index_files/js/custom.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.mCustomScrollbar.min.js"></script>
-
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+<script type="text/javascript" src="./index_files/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./index_files/js/jquery.ztree.all-3.5.min.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
@@ -40,7 +35,183 @@
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
 
+
+[slider] {
+  position: relative;
+  height: 14px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 45px 0 10px 0;
+}
+
+[slider] > div {
+  position: absolute;
+  left: 13px;
+  right: 15px;
+  height: 14px;
+}
+
+[slider] > div > [inverse-left] {
+  position: absolute;
+  left: 0;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+[slider] > div > [inverse-right] {
+  position: absolute;
+  right: 0;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+[slider] > div > [range] {
+  position: absolute;
+  left: 0;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #1ABC9C;
+}
+
+[slider] > div > [thumb] {
+  position: absolute;
+  top: -7px;
+  z-index: 2;
+  height: 28px;
+  width: 28px;
+  text-align: left;
+  margin-left: -11px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  background-color: #FFF;
+  border-radius: 50%;
+  outline: none;
+}
+
+[slider] > input[type=range] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+  height: 14px;
+  top: -2px;
+  width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+div[slider] > input[type=range]::-ms-track {
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: transparent;
+}
+
+div[slider] > input[type=range]:focus {
+  outline: none;
+}
+
+div[slider] > input[type=range]::-ms-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type=range]::-moz-range-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+  -webkit-appearance: none;
+}
+
+div[slider] > input[type=range]::-ms-fill-lower {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-fill-upper {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-tooltip {
+  display: none;
+}
+
+[slider] > div > [sign] {
+  opacity: 0;
+  position: absolute;
+  margin-left: -11px;
+  top: -39px;
+  z-index:3;
+  background-color: #1ABC9C;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  -webkit-border-radius: 28px;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+[slider] > div > [sign]:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  border-radius: 16px;
+  top: 19px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top-width: 16px;
+  border-top-style: solid;
+  border-top-color: #1ABC9C;
+}
+
+[slider] > div > [sign] > span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+[slider]:hover > div > [sign] {
+  opacity: 1;
+}</style>
 <style type="text/css">
 	.bsearch{	display: table;
     border-collapse: separate;
@@ -55,6 +226,7 @@
     $('#mytableresult').DataTable();
 } );
 </script>
+
 <style> /*버튼스타일*/
 	.btncsv {
  		background-color: DodgerBlue;
@@ -70,7 +242,7 @@
 		background-color: RoyalBlue;
 	}
 </style>
-<script> //범위지정용값으로 php에서는 $min,$max를 사용한다. $amount는 화면상의 표시값
+<!-- <script> //범위지정용값으로 php에서는 $min,$max를 사용한다. $amount는 화면상의 표시값
 	jQuery($ => {
   	let $amount = $('#amount'),
 		$min = $('#min'),
@@ -79,8 +251,8 @@
   	let $slider = $("#slider-range").slider({ //slider의 구성요소 설정
     		range: true,
 	    	min: 0,
-	    	max: 100,
-    		values: [0, 100],
+	    	max: 30,
+    		values: [0, 30],
     		slide: function(event, ui) {
      			$amount.val(`값${ui.values[0]} - 값${ui.values[1]}`);
       			$min.val(ui.values[0]);
@@ -90,7 +262,7 @@
 
 		$amount.val("값" + $slider.slider("values", 0) + " - $" + $slider.slider("values", 1));//표시되는 값
 	});
-</script>
+</script> -->
 <script>
 	jQuery(function($){
 	$('.table').footable();
@@ -152,11 +324,114 @@ document.addEventListener('DOMContentLoaded', e => {
     new ToCSV()
 })
 </script>
+<style>
+	.showcontents {
+		display: inline-block;
+	}
+	
+	.manImg {
+  		display: none;
+	}
+	.hover-text:hover ~ .manImg {
+  		display: block;  
+	}
+	.btncsv {
+ 		background-color: DodgerBlue;
+ 		border: none;
+ 		color: white;
+  		cursor: pointer;
+  		font-size: 15px;
+		width: 150px;
+		height: 30px;
+	}
+
+	.btncsv:hover {
+		background-color: RoyalBlue;
+	}
+</style>
+
+<style>
+	table.type09 tbody tr #dbcontent{
+    background: #f3f2f7;
+    width: 30%}
+
+	table.type09 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;}
+
+	table.type09 thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;}
+
+	table.type09 tbody th {
+    width: 20%;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f9f7;}
+	table.type09 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;}
+</style>
+
+<style type="text/css">
+	#loading-mask {
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#ffffff;
+    opacity:0.80;
+    filter:alpha(opacity=80);
+    z-index:30000;
+    display:none;}
+
+	hr { 
+  	display: block;
+  	margin-top: 0.5em;
+  	margin-bottom: 0.5em;
+  	margin-left: auto;
+	margin-right: auto;
+  	border-style: inset;
+  	border-width: 1px;} 
+</style>
+<script type="text/javascript">
+		$(document).ready(function () {
+			$(".sitemap-d2 li").mouseover(function(){
+				$this = $(this);
+				$this.find(".sitemap-d3").show();
+				$this.addClass("expend");});
+		
+			$(".sitemap-d2 li").mouseout(function(){
+				$this = $(this);
+				$this.find(".sitemap-d3").hide();
+				$this.removeClass("expend");});});
+</script>
 </head>
 <body>
 	<!--AOS 효과를 사용하기 위한 script head에 작성하면 동작하지 않으니 주의 할것-->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>AOS.init();</script>
+	<script type="text/javascript">
+		var moveURLFlag = false;
+		var moveURL = '';
+		$(document).ready(function () {
+			changeFontSize();
+			$("form").each(function(){
+				addFontSizeToFormOnsubmit($(this).attr("id"));});
+		var GDSsessionExpireTime;});
+	</script>
+
+	<!-- samenu1의 ul .has-child 마우스 올려놓을때 메뉴확장 -->
+	
+
+
 <div id="mwrap">
 	<div class="top_area">
 		<dl class="logo_box">
@@ -167,38 +442,13 @@ document.addEventListener('DOMContentLoaded', e => {
 			</dt>
 		</dl>
 	</div>
-</div>	
+	
 
-<script type="text/javascript">
-	var moveURLFlag = false;
-	var moveURL = '';
-	$(document).ready(function () {
-		changeFontSize();
-		$("form").each(function(){
-			addFontSizeToFormOnsubmit($(this).attr("id"));
-	});	
-	var GDSsessionExpireTime;});
-</script>
-
-<!-- samenu1의 ul .has-child 마우스 올려놓을때 메뉴확장 --><!---->
-<script type="text/javascript">
-	$(document).ready(function () {
-		$(".sitemap-d2 li").mouseover(function(){
-		$(this).find(".sitemap-d3").show();
-		$(this).addClass("on");
-		});
-		
-		$(".sitemap-d2 li").mouseout(function(){
-			$(this).find(".sitemap-d3").hide();
-			$(this).removeClass("on");
-		});	
-	});
-</script>
 
 	
 <!-- header 부분-->
-<div id="header" class="main-header">
-	<div class="mheader_wrap" style="padding-top: 50px;height: 200px;padding-bottom: 50px;">
+<div id="header" class="main-header" style="padding-bottom: 100px; border-top-width: 1px;">
+	<div class="mheader_wrap" style="padding-top: 50px;height: 100px;padding-bottom: 50px;">
 	<div class="main_titl1">
 		<p style="margin-left: 250px;">더조은 아카데미</p>
 		<h3 style="padding-top: 0px; padding-left: 0px; padding-right: 20px;">
@@ -210,7 +460,7 @@ document.addEventListener('DOMContentLoaded', e => {
 </div>
 	
 <!--메인 메뉴 부분-->	
-<div class="mgnb-wrap">
+<div class="mgnb-wrap" style="height: 56px;">
 	<div class="mgnb-areas">
 		<ul class="mgnbs" style="width: 1000px; padding-left: 0px;">
 
@@ -300,7 +550,7 @@ document.addEventListener('DOMContentLoaded', e => {
 						<dt class="sub3_2" style="margin-bottom: 10px;"><p>전처리 데이터</p></dt>
 						<dd>
 							<ul>
-								<li class="sub3_1_1"><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터 다운로드</a></li>
+								<li class="sub3_1_1"><a href="https://aminoragit.github.io/websitegroupc/html/data_download.html">전처리 데이터 다운로드</a></li>
 							</ul>									
 						</dd>
 						</dl>
@@ -362,7 +612,7 @@ document.addEventListener('DOMContentLoaded', e => {
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_1.html">기상자료 데이터 포털</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">기상자료 데이터 포털</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
 											<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
@@ -370,7 +620,7 @@ document.addEventListener('DOMContentLoaded', e => {
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite_2.html">공모전/데이터</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/DataSetsite.html">공모전/데이터</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://dacon.io/">데이콘</a></li>
 											<li><a href="https://www.kaggle.com/">Kaggle</a></li>
@@ -387,7 +637,7 @@ document.addEventListener('DOMContentLoaded', e => {
 						<ul class="sitemap-d1 s3">
 							<li><a href="http://groupc.dothome.co.kr/mysql.php">MYSQL</a>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="http://groupc.dothome.co.kr/data_download.html">전처리 데이터</a>
+									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/data_download.html">전처리 데이터</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://aminoragit.github.io/websitegroupc/html/data_download.html">전처리 데이터 다운로드</a></li>
 										</ul>
@@ -447,21 +697,18 @@ document.addEventListener('DOMContentLoaded', e => {
 	</div>
 
 	<div id="content" class="sub">
+		<br/>
 		<div class="content-head" style="margin-left: 250px;">
-			<h2>DB 조회방법</h2>
+			<h2>전처리 데이터 다운로드</h2>
 		</div>
 	</div>
 
-		
+	<br/>	
+	<div id="content2" class="sub2">
+		<canvas id="myChart"></canvas>
+<script> var ctx = document.getElementById('myChart'); var myChart = new Chart(ctx, { type: 'bar', data: { labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], datasets: [{ label: '# of Votes', data: [12, 19, 3, 5, 2, 3], backgroundColor: [ 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)' ], borderColor: [ 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)' ], borderWidth: 1 }] }, options: { scales: { yAxes: [{ ticks: { beginAtZero: true } }] } } }); </script>
 
-
-
-
-
-
-		<div id="content2" class="sub2" style=" margin-bottom: 60px;">
-			
-			<?php
+<?php
 				$db_host = "localhost"; 
 				$db_user = "groupc"; 
 				$db_passwd = "Cgroup12!";
@@ -470,83 +717,85 @@ document.addEventListener('DOMContentLoaded', e => {
 				if (mysqli_connect_errno($conn)) {
 					echo "데이터베이스 연결 실패: " . mysqli_connect_error();
 				} else {
-				"데이터베이스 연결 성공";
+				echo "데이터베이스 연결 성공";
 				}
 			?>
 
-
-
-
-
-
-
-
-
-
-
 	<h1>사용할 데이터 출력</h1>
     
+    <table class="bsearch" border="1">
     <h4>MySQL에 저장된 데이터는 아래와 같습니다.<br/>
-    	
+    	<button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button>
+		
+		<button type='button' class="btncsv" id="csvDownloadButton"><i class="fa fa-download"></i>검색한 csv 다운로드</button>
     </h4>
     <!--입력값으로 검색하기-->
+	<form method="POST" action="mysqltest.php">
+		<div slider id="slider-distance">
+			<div>
+				<div inverse-left style="width:70%;"></div>
+				<div inverse-right style="width:70%;"></div>
+				<div range style="left:30%;right:40%;"></div>
+				<span thumb style="left:30%;"></span>
+				<span thumb style="left:60%;"></span>
+				<div sign style="left:30%;">
+					<span id="value">30</span>
+				</div>
+				<div sign style="left:60%;">
+					<span id="value">60</span>
+				</div>
+				</div>
+				<input type="range" name="min" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+				this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+				var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+				var children = this.parentNode.childNodes[1].childNodes;
+				children[1].style.width=value+'%';
+				children[5].style.left=value+'%';
+				children[7].style.left=value+'%';
+				children[11].style.left=value+'%';
+				children[11].childNodes[1].innerHTML=this.value;" />
+				<input type="range" name="max" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+				this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+				var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+				var children = this.parentNode.childNodes[1].childNodes;
+				children[3].style.width=(100-value)+'%';
+				children[5].style.right=(100-value)+'%';
+				children[9].style.left=value+'%';children[13].style.left=value+'%';
+				children[13].childNodes[1].innerHTML=this.value;"/>
+			</div>
 
 
 
 
-	<form method="POST" action="mysql.php">
-		<!-- 생태구역: <input type="text" name="area" placeholder="거진연안"/><br/> -->
-		표층수온: <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="slide-value" /><br/>
-  		<select name="taskOption">            
+		
+			년월: <input type="text" name="YEAR" placeholder="201702"/><br/>   
+  		표층수온 : <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="slide-value" /><br/>
+  		 <select name="taskOption">
             <option value="201507">201507</option>
             <option value="201702">201702</option>
-        </select> 
-			<input type="hidden" id="min" value="0" name='min'/>
-			<input type="hidden" id="max" value="100"name='max' />
-  			<div id="slider-range" style="width: 500px; height: 20px;"></div>	
-		<input type="submit" name="submit"/>		
-  			<!--입력한 검색조건 php로 전달하기-->
+          </select>
+  			<div id="slider-range" style="width: 500px;"></div>	
+		
+		<input type="submit" name="submit"/> 
+
+		
+  		<!--입력한 검색조건 php로 전달하기-->
 	</form>
-
-
-
-	<button type='button'onclick="location.href='http://groupc.dothome.co.kr/test.csv'" class="btncsv"><i class="fa fa-download"></i>CSV원본 다운로드</button>
-	<button type='button' class="btncsv" id="csvDownloadButton"><i class="fa fa-download"></i>검색한 csv 다운로드</button>
-
-
+	</table>
 
 
 	<?php
+	 $year=(int)$_POST['YEAR'];
 	 $min_value=(float)$_POST['min']; //표층수온 최소값
 	 $max_value=(float)$_POST['max']; //표층수온 최대값
 	 $year2=(int)$_POST['taskOption'];
-	 $area=$_POST['area'];
 	 echo "년월 : "."$year2"."<br/>";
 	 echo "표층수온 최소값 : ".$min_value."<br/>"; //출력값 확인용
 	 echo "표층수온 최대값 : ".$max_value."<br/>";
 	 
  	 if(!empty( $year2 )){
-        $sql_template = "SELECT * FROM `datatable` WHERE `년월`= %d AND `표층수온`> %f AND `표층수온`<%f "; //%d는 정수형,%f는 실수형
+        $sql_template = "SELECT * FROM `datatable` WHERE `년월`= %d AND `표층수온`>%f AND `표층수온`<%f"; //%d는 정수형,%f는 실수형
  		$sql2=sprintf($sql_template,$year2,$min_value,$max_value);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         $result = mysqli_query($conn,$sql2);
         $row = mysqli_fetch_array($result);
         //csv 다운을 위해 table의 id를 설정해줌(=mytableresult)
@@ -622,10 +871,9 @@ else{
 	echo "데이터 베이스 select 문을 입력해주세요";
 }
 	?>
+	
 	</div>
-
-		</div>
-	</div>
+</div>
 </div>
 <div class="clear"></div>
 </body>
