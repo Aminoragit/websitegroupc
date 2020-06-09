@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>MySQL 접속해서 데이터 가져오기</h1>
+
+     <?php 
+    $mysql_host = 'localhost';
+    $mysql_user = 'groupc';
+    $mysql_password = 'Cgroup12!';
+    $mysql_db = 'groupc';
+    $conn = mysqli_connect($mysql_host,$mysql_user,$mysql_password,$mysql_db);
+    $query = "select * from datatable";
+    $result = mysqli_query($query);
+    echo "MySQL에서 가져온 데이터는 아래와 같습니다.<br/>";
+    while($row = mysqli_fetch_array($result)){
+    echo "번호: ".$row['COL 1']."/ 
+    이름: ".$row['COL 2']."/ 
+    성별: ".$row['COL 3']."/ 
+    몸무게: ".$row['COL 4']."/ 
+    키: ".$row['COL 5']."/ 
+    영어점수: ".$row['COL 6']."/ 
+    취미: ".$row['COL 7']."
+    <br/>";} 
+    ?>
+</body>
+</html>

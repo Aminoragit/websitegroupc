@@ -1,0 +1,18 @@
+192.168.0.192:5000
+
+css
+<link rel="stylesheet" media="all" href="{{ url_for('static', filename='index_files/css/asdf.css')}}">
+
+이미지
+<link rel="apple-touch-icon" sizes="30x30" href="{{ url_for('static', filename='index_files/image/img1.png')}}">
+<img src="{{ url_for('static', filename='index_files/image/test.jpeg') }}">
+
+
+<img src="./index_files/image/icon.jpg" alt="C조 홈페이지" width="50" height="50" style="width: 30px; height: 30px;">
+<img src="{{ url_for('static', filename='index_files/image/icon.jpg') }}" alt="C조 홈페이지" width="50" height="50" style="width: 30px; height: 30px;">
+
+<img src="./index_files/image/all_btn1.gif" alt="전체 메뉴 보기">
+<img src="{{ url_for('static', filename='index_files/image/all_btn1.gif') }}" alt="전체 메뉴 보기">
+
+자바스크립트
+<script  src="{{ url_for('static', filename='index_files/js/script.js')}}" data-turbolinks-track="reload"></script>

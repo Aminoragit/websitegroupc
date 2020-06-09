@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+      <script type=text/javascript>
+  </script>
+</head>
+<body>
+  <input type="text" name="input_data">
+  <button class="send">Send data to Python</button>
+
+<script>
+  $(document).ready(function(){
+  $('.send').click(function() {
+
+  const input_data = $('[name=input_data]').val();
+if(input_data=='')
+{
+
+}
+else{
+  $.ajax({
+    url: 'ajax_python.py',
+    method:'post',
+    data:{message_py:input_data},
+    dataType:'text',
+    success:function(data)
+    {
+      alert(data);
+    }
+  })
+}
+
+});
+
+
+  });
+</script>
+</body>
