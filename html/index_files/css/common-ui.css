@@ -1,0 +1,48 @@
+
+/* Temp 2015.05.27 */
+#wrap #content{width:800px;margin:10px auto}
+
+.board-total-search .field > span.search-date-span{margin:0}
+.ui-datepicker-trigger{float:left;margin-left:-33px;margin-top:7px}
+
+
+/* 공통 */
+.table-cell{width:100%;margin-bottom:50px;border-top:2px solid #959595;border-bottom:1px solid #959595}
+.table-cell.top td,.table-cell th{text-align:center}
+.table-cell.top td p{margin-left:0}
+.table-cell caption{display:none}
+.table-cell thead th{padding:7px 10px;border-bottom:1px solid #959595;line-height:26px;font-size:1.05em;font-weight:700;text-align:center;vertical-align:middle}
+.table-cell tbody th,.table-cell tfoot th{border-top:1px solid #e5e5e5;font-size:1em;text-align:center;vertical-align:middle}
+.table-cell tbody td,.table-cell tfoot td{padding:12px 10px 8px;border-top:1px solid #e5e5e5;line-height:18px;font-size:14px;vertical-align:middle}
+.table-cell tbody td:first-child{border-left:0}
+.table-cell tbody tr:first-child td{border-top:0}
+.table-cell td.center{text-align:center}
+.table-cell tbody td a:hover{text-decoration:underline}
+
+/* Select box Design */
+select::-ms-expand {
+    display: none;
+}
+select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+	background: url(../images/common/select_arrow1.png) no-repeat 100% 50%;
+	background-color: white;
+	border: 1px solid #d9d8d8;
+	padding-right:25px;
+	padding-left:5px !important;
+	padding-top:3px;
+	padding-bottom:3px; 
+	color:#585a63;
+}
+.select-box{position:relative}
+.select-box > .title{min-width:100px;padding:8px 10px 7px;background:none;font-size:14px;color:#4e4f50;text-align:left}
+.select-box > button .sprite-icons{float:right;margin-left:10px;margin-top:5px}
+.select-box > ul{display:none;position:absolute;top:30px;right:0;left:-1px;border:1px solid #d5d5d5;background-color:#fff}
+.select-box > ul > li{font-size:14px}
+.select-box > ul > li > button{width:100%;padding:0 7px;background:none;line-height:24px;font-size:14px;text-align:left;white-space:nowrap}
+.select-box select{overflow:hidden;position:absolute;left:-9999em}
+
