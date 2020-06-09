@@ -16,7 +16,8 @@
 git홈페이지와 별도로 dothome에서도 홈페이지를 구축하였다. 
 각 사이트는 동일하지만 속도면에서는 dothome 홈페이지가 훨씬 빠르다.
 
-https://aminoragit.github.io/websitegroupc/
+https://aminoragit.github.io/websitegroupc/  
+
 http://groupc.dothome.co.kr/index.html
 
 
