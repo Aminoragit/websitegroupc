@@ -22,3 +22,19 @@ http://groupc.dothome.co.kr/index.html
 
 
 
+
+
+
+#### 서버 여는법
+
+flask 폴더를 보면 test.py가 있다, flask 폴더에서 cmd를 열어주고
+##### python test.py를 실행해주면 127.0.0.1 - - [09/Jun/2020 17:11:32] "[35m[1mGET / HTTP/1.1[0m" 500 -]
+와 같이 뜨는데 이때 인터넷 주소로 `localhost:5000/머신러닝명` 을 쳐주면 해당 머신러닝 페이지로 넘어간다.
+머신러닝명: tree, kmeans,knn, Gradient, r_forest, keras
+
+ex ) localhost:5000/tree
+
+외부사이트에서 접속할경우 cmd->ipconfig->ipv4의 주소로 쳐주면된다.
+ex) 192.168.0.231 <== ipv4
+    192.168.0.231:5000/tree
+로 실행하면 외부에서도 접속이 가능하지만 서버를 열어놔야지만 가능하다, Django로 이식할 예정
