@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* ---------------------------------------------2020 main layout end------------------------------------------------- */
+.main #mfooter{border:none}
+.container {width:1070px; margin:0 auto; position:relative;}
+.clear {content:''; overflow:hidden; clear:both;}
+.main_titl1 p {font-size:18px;line-height:21px; font-weight:normal; color:#828282; margin:0 auto; width:360px; margin-bottom:5px; text-align: left;}
+.main_titl1 h3 {font-size:57px; line-height:57px; color:#191921; font-weight:bold; margin-bottom:40px;}
+.main_titl1 strong {font-size:57px; line-height:57px; color:#6ca7d3; font-weight:bold; margin-bottom:40px;}
+

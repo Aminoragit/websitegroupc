@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/TJOEUN-JR/Desktop/machine_learning.html -->
+<html lang="ko-KR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>BAWS(Bigdata Analytics Web Service)</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0">
+<link rel="shortcut icon" sizes="30x30" href="{{ url_for('static', filename='index_files/image/icon.jpg')}}">
+<link rel="stylesheet" media="all" href="{{url_for('static',filename='index_files/css/common.css')}}">
+<link rel="stylesheet" media="all" href="{{url_for('static',filename='index_files/css/font-awesome.min.css')}}">
+<link rel="stylesheet" media="all" href="{{url_for('static',filename='index_files/css/common-ui.css')}}">
+<link rel="stylesheet" media="all" href="{{url_for('static',filename='index_files/css/jquery.bxslider.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='index_files/css/zTreeStyle.css')}}">
+<link rel="stylesheet" media="all" href="{{url_for('static',filename='index_files/css/sub.css')}}">
+<link rel="stylesheet" media="all" href="{{url_for('static',filename='index_files/css/main.css')}}">
+<link rel="stylesheet" media="all" href="{{url_for('static',filename='index_files/css/layout.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/jquery-2.1.0.min.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/common.js')}}" data-turbolinks-track="reload"></script>
+<script src="{{ url_for('static', filename='index_files/js/jquery.scrollTo.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/TweenMax.min.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/browser.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/menu.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/messages.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/gdsUtil.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/custom.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/jquery.mCustomScrollbar.min.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/jquery.bxslider.min.js')}}" data-turbolinks-track="reload"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index_files/js/jquery.ztree.all-3.5.min.js')}}" data-turbolinks-track="reload"></script>
+<style>
+	.btncsv {
+ 		background-color: DodgerBlue;
+ 		border: none;
+ 		color: white;
+  		cursor: pointer;
+  		font-size: 15px;
+		width: 150px;
+		height: 30px;
+	}
+
+	.btncsv:hover {
+		background-color: RoyalBlue;
+	}
+	.image_table{
+		width: 195px;
+		height: 80px;
+	}
+	table.blueTable {
+  		width: 100%;
+  		text-align: center;
+  	}
+  	table.blueTable td, table.blueTable th {
+  		border: 1px solid #AAAAAA;
+  		padding: 3px 2px;
+  	}
+	table.blueTable tbody td {
+  		font-size: 19px;
+  		font-weight: bold;
+  		color: #000000;
+	}
+	table.blueTable thead {
+		background: #1C6EA4;
+	  background: -webkit-linear-gradient(#5592bb 0%, #327cad 66%, #1C6EA4 100%);
+	  background: -o-linear-gradient(#5592bb 0%, #327cad 66%, #1C6EA4 100%);
+	  background: linear-gradient(#5592bb 0%, #327cad 66%, #1C6EA4 100%);
+	  border-bottom: 2px solid #000000;
+	}
+	table.blueTable thead th {
+  		font-size: 20px;
+    	font-weight: bold;
+  		color: #FFFFFF;
+  		text-align: center;
+  		border-left: 2px solid #F5F5F5;
+	}
+	table.blueTable thead th:first-child {
+  	border-left: none;
+	}
+
+	table.blueTable tfoot {
+  		font-size: 14px;
+  		font-weight: bold;
+  		color: #FFFFFF;
+	}
+	table.blueTable tfoot td {
+	  	font-size: 14px;
+	}
+</style>
+
+</head>
+<body>
+	<!--AOS 효과를 사용하기 위한 script head에 작성하면 동작하지 않으니 주의 할것-->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>AOS.init();</script>
+<div id="mwrap">
+	<div class="top_area">
+		<dl class="logo_box">
+			<dt>
+				<h1 class="logo">
+					<a href="http://groupc.dothome.co.kr/index.html" class="gov_logo1">
+						<img src="{{ url_for('static', filename='index_files/image/icon.jpg') }}" alt="C조 홈페이지" width="50" height="50" style="width: 30px; height: 30px;">
+					</a>
+				</h1>
+			</dt>
+		</dl>
+	</div>
+	
+<script type="text/javascript">
+	var moveURLFlag = false;
+	var moveURL = '';
+	$(document).ready(function () {
+		changeFontSize();
+		$("form").each(function(){
+			addFontSizeToFormOnsubmit($(this).attr("id"));
+	});
+	
+	var GDSsessionExpireTime;
+});
+</script>
+
+<!-- samenu1의 ul .has-child 마우스 올려놓을때 메뉴확장 --><!---->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".sitemap-d2 li").mouseover(function(){
+		$(this).find(".sitemap-d3").show();
+		$(this).addClass("on");
+		});
+		
+		$(".sitemap-d2 li").mouseout(function(){
+			$(this).find(".sitemap-d3").hide();
+			$(this).removeClass("on");
+		});	
+	});
+</script>
+
+	
+<!-- header 부분-->
+<div id="header" class="main-header">
+	<div class="mheader_wrap" style="padding-top: 50px;height: 100px;padding-bottom: 50px;">
+	<div class="main_titl1">
+		<p style="margin-left: 250px;">더조은 아카데미</p>
+		<h3 style="padding-top: 0px; padding-left: 0px; padding-right: 20px;">
+			<strong style="padding-top: 0px;">C조</strong> 
+			수질 오염 예측모델
+		</h3>
+	</div>
+	</div>
+</div>
+	
+<!--메인 메뉴 부분-->	
+<div class="mgnb-wrap">
+	<div class="mgnb-areas">
+		<ul class="mgnbs" style="width: 1000px; padding-left: 0px;">
+
+			<!--<li>마다 메뉴가 1개씩 있으며 하위 메뉴<dt>와 최하위 메뉴<dd->ul->li>로 구성되어 있다.-->
+			<!--메뉴1 예측모델 구상 목표-->
+			<li class=""><a href="http://groupc.dothome.co.kr/html/predictmodelgoal.html">예측모델 구상 목표</a></li>
+
+			<!--메뉴2 머신러닝 딥러닝-->
+			<li class=""><a href="http://192.168.0.192:5000/knn">머신러닝 딥러닝</a>
+				<div class="mgnbs-div">	
+					<dl>
+						<dt class="sub1_1"><p>머신러닝</p></dt>
+						<dd>
+							<ul>
+								<li class="sub1_1_1"><a href="http://192.168.0.192:5000/knn">Knn</a></li>
+								<li class="sub1_1_2"><a href="http://192.168.0.192:5000/kmeans">K-Means</a></li>
+								<li class="sub1_1_3"><a href="http://192.168.0.192:5000/tree">DecisionTree</a></li>
+								<li class="sub1_1_4"><a href="http://192.168.0.192:5000/r_forest">R_Forest</a></li>
+								<li class="sub1_1_5"><a href="http://192.168.0.192:5000/Gradient">Gradient</a></li>
+							</ul>									
+						</dd>		
+					</dl>
+					<dl>
+						<dt class="sub1_11"><p>딥러닝[Keras]</p>	</dt>
+						<dd>
+							<ul>
+								<li class="sub1_1_1"><a href="http://192.168.0.192:5000/keras">Keras(Dense)</a></li>
+								
+								</ul>									
+						</dd>		
+					</dl>
+				</div>
+			</li>
+			
+			<!--메뉴3 데이터셋 사이트-->
+			<li class=""><a href="http://groupc.dothome.co.kr/html/DataSetsite.html">데이터셋 사이트</a>
+				<div class="mgnbs-div">
+					<dl>
+						<dt class="sub2_1" style="margin-bottom: 10px;"><p>공공데이터포털 추천</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_1_1"><a href="https://www.data.go.kr/">공공 데이터 포털</a></li>
+								<li class="sub2_1_2"><a href="http://data.seoul.go.kr/">서울 열린 데이터 광장</a></li>
+								<li class="sub2_1_3"><a href="https://developers.naver.com/main/">네이버 Open API </a></li>
+								<li class="sub2_1_4"><a href="https://developers.kakao.com/">카카오 Open API </a></li>
+							</ul>									
+						</dd>
+					</dl>
+					<dl>
+						<dt class="sub2_2" style="margin-bottom: 10px;"><p>기상자료 데이터 포털</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_2_1"><a href="https://data.kma.go.kr/">기상청 기상자료데이터</a></li>
+								<li class="sub2_2_2"><a href="https://bd.kma.go.kr/kma2019/svc/main.do" >날씨마루</a></li>
+								</ul>									
+						</dd>
+					</dl>
+					<dl>
+						<dt class="sub2_3" style="margin-bottom: 10px;"><p>공모전/데이터</p></dt>
+						<dd>
+							<ul>
+								<li class="sub2_3_1"><a href="https://dacon.io/">데이콘</a></li>
+								<li class="sub2_3_2"><a href="https://www.kaggle.com/">Kaggle</a></li>
+								<li class="sub2_3_3"><a href="https://www.wevity.com/">WEVITY</a></li>
+								<li class="sub2_3_4"><a href="https://www.all-con.co.kr/page/uni_contest.php">allcontest</a></li>
+								<li class="sub2_3_5"><a href="https://www.thinkcontest.com/">씽굿</a></li>
+							</ul>									
+						</dd>
+					</dl>
+				</div>
+			</li>
+										
+			<!--메뉴4 MySQL-->
+			<li class=""><a href="http://groupc.dothome.co.kr/html/data_download.html">MySQL</a>
+				<div class="mgnbs-div">
+					<div class="mgnbs-div2">
+						<dl>
+							<dt class="sub3_1"><p>DB 조회</p></dt>
+							<dd>
+								<ul>
+									<li class="sub3_2_1"><a href="http://groupc.dothome.co.kr/html/howwork.html">DB 조회 방법</a></li>
+									<li class="sub3_2_2"><a href="http://groupc.dothome.co.kr/html/mysql.php">DB 조회 페이지</a></li>
+								</ul>									
+							</dd>		
+						</dl>	
+						<dl style="height: 150px;width: 250px;">
+						<dt class="sub3_2" style="margin-bottom: 10px;"><p>전처리 데이터</p></dt>
+						<dd>
+							<ul>
+								<li class="sub3_1_1"><a href="http://groupc.dothome.co.kr/html/data_download.html">전처리 데이터 다운로드</a></li>
+							</ul>									
+						</dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+
+			<!-- 메뉴5 C조소개-->
+			<li class=""><a href="http://groupc.dothome.co.kr/index.html">C조에 대하여</a></li></ul>
+
+
+
+		<div class="samenu1">
+			<a href="#"><img src="{{ url_for('static', filename='index_files/image/all_btn1.gif') }}" alt="전체 메뉴 보기"></a>
+				<div class="mgnbs-div3" style="display: block;width: 1080px;">
+					<div class="section-sitemap">
+
+						<!--<ul>마다 samenu의 상위 메뉴를 담당한다.-->
+						<ul class="sitemap-d1 s1">
+							<!--<li>는 해당 페이지의 base.html로 연결됨-->
+							<li><a href="http://groupc.dothome.co.kr/html/machine_learning.html">머신러닝/딥러닝</a>
+								<!-- <ul .sitemap-d2>==하위 메뉴 -->
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://192.168.0.192:5000/knn">머신러닝</a>
+										<!-- <ul .sitemap-d3>==최하위 메뉴-->
+										<ul class="sitemap-d3">
+											<li><a href="http://192.168.0.192:5000/knn">KNN</a></li>
+											<li><a href="http://192.168.0.192:5000/kmeans">K-Means</a></li>
+											<li><a href="http://192.168.0.192:5000/tree">DecisionTree</a></li>
+											<li><a href="http://192.168.0.192:5000/r_forest">R_Forest</a></li>
+											<li><a href="http://192.168.0.192:5000/Gradient">Gradient</a></li>
+										</ul>
+									</li>
+								</ul>
+
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://192.168.0.192:5000/keras">딥러닝</a>
+										<ul class="sitemap-d3">
+											<li><a href="http://192.168.0.192:5000/keras">Keras(Dense)</a></li>
+											
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+
+						<ul class="sitemap-d1 s2">
+							<li><a href="http://groupc.dothome.co.kr/html/DataSetsite.html">데이터셋 사이트</a>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/html/DataSetsite.html">공공데이터 포털 추천</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://www.data.go.kr/">공공데이터 포털</a></li>
+											<li><a href="http://data.seoul.go.kr/">서울 데이터 센터</a></li>
+											<li><a href="https://developers.naver.com/main/">네이버 Open API</a></li>
+											<li><a href="https://developers.kakao.com/">카카오 Open API</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/html/DataSetsite_1.html">기상자료 데이터 포털</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://data.kma.go.kr/cmmn/main.do">기상청자료개방</a></li>
+											<li><a href="https://bd.kma.go.kr/kma2019/svc/main.do">날씨마루</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/html/DataSetsite_2.html">공모전/데이터</a>
+										<ul class="sitemap-d3">
+											<li><a href="https://dacon.io/">데이콘</a></li>
+											<li><a href="https://www.kaggle.com/">Kaggle</a></li>
+											<li><a href="https://www.wevity.com/">WEVITY</a></li>
+											<li><a href="https://www.all-con.co.kr/">allcontest</a></li>
+											<li><a href="https://www.thinkcontest.com/">씽굿</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+
+						<ul class="sitemap-d1 s3">
+							<li><a href="http://groupc.dothome.co.kr/mysql.php">MYSQL</a>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/html/data_download.html">전처리 데이터</a>
+										<ul class="sitemap-d3">
+											<li><a href="http://groupc.dothome.co.kr/html/data_download.html">전처리 데이터 다운로드</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="sitemap-d2">
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/mysql.php">DB조회</a>
+										<ul class="sitemap-d3">
+											<li><a href="http://groupc.dothome.co.kr/html/howwork.html">DB조회 방법</a></li>
+											<li><a href="http://groupc.dothome.co.kr/html/mysql.php" >DB조회 페이지</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<ul class="sitemap-d1 s4">
+							<li><a href="http://groupc.dothome.co.kr/index.html">C조소개</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>	
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+
+	<!-- //gnb -->	
+
+<div id="container">
+	<div id="sidebar" style="height: 320px;"> 
+		<div class="lnb-wrap">
+			<div class="lnb-top">
+				<h3 class="lnb-title1"><span class="data_tit1">머신러닝/딥러닝</span></h3>
+					<ul id="leftMenuUi" class="lnbs">
+						<li class="has-child"><a href="http://192.168.0.192:5000/knn"><span>머신러닝</span></a>
+								<ul class="lnb_list1" style="width: 260px;">
+									<li><a href="http://192.168.0.192:5000/knn">KNN</a></li>
+									<li><a href="http://192.168.0.192:5000/kmeans">K-Means</a></li>
+									<li><a href="http://192.168.0.192:5000/tree">DecisionTree</a></li>
+									<li><a href="http://192.168.0.192:5000/r_forest">R_Forest</a></li>
+									<li><a href="http://192.168.0.192:5000/Gradient">Gradient</a></li>
+								</ul>
+						</li>
+						<li class="has-child"><a href="http://192.168.0.192:5000/keras"><span>딥러닝</span></a>
+								<ul class="lnb_list1">
+									<li><a href="http://192.168.0.192:5000/keras">Keras(Dense)</a></li>								
+								</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="content" class="sub">
+			<div class="content-head" style="margin-left: 250px;">
+				<h2>머신러닝/딥러닝</h2>
+			</div>
+		</div>
+
+		<div id="content2" class="sub2">
+			<h1> 수질 Kmeans </h1>
+    		<div>
+
+      			<form action="/kmeans_exdown" method = 'POST'>
+        			<label for="kmeans_exdown">분석에 사용한 데이터 : </label>
+        			<button type = 'submit' name = 'kmeans_exdown' class="btncsv"> download</button>
+      			</form>
+
+    		</div>
+                                
+                           <br/>
+    			<form method="POST" action="/kmeans" enctype="multipart/form-data">
+     				<label for="col1">변수 1 :</label>
+
+						<select name="col1" id="col1">
+	  						<option value="표층수온">표층수온</option>
+	  						<option value="저층수온">저층수온</option>
+	  						<option value="표층염분">표층염분</option>
+				  			<option value="저층염분">저층염분</option>
+				  			<option value="표층pH">표층pH</option>
+				  			<option value="저층pH">저층pH</option>
+				  			<option value="표층DO">표층DO</option>
+				  			<option value="저층DO">저층DO</option>
+				  			<option value="표층COD">표층COD</option>
+				  			<option value="저층COD">저층COD</option>
+				  			<option value="표층NH4-N">표층NH4-N</option>
+				  			<option value="저층NH4-N">저층NH4-N</option>
+				  			<option value="표층NO2-N">표층NO2-N</option>
+				  			<option value="저층NO2-N">저층NO2-N</option>
+				  			<option value="표층NO3-N">표층NO3-N</option>
+				  			<option value="저층NO3-N">저층NO3-N</option>
+				  			<option value="표층DIN">표층DIN</option>
+				  			<option value="저층DIN">저층DIN</option>
+				  			<option value="표층T-N">표층T-N</option>
+				  			<option value="저층T-N">저층T-N</option>
+				  			<option value="표층DIP">표층DIP</option>
+				  			<option value="저층DIP">저층DIP</option>
+				  			<option value="표층T-P">표층T-P</option>
+				  			<option value="저층T-P">저층T-P</option>
+				  			<option value="표층SiO2-Si">표층SiO2-Si</option>
+				  			<option value="저층SiO2-Si">저층SiO2-Si</option>
+				  			<option value="표층SS">표층SS</option>
+				  			<option value="저층SS">저층SS</option>
+							<option value="표층Chl-a">표층Chl-a</option>
+				  			<option value="저층Chl-a">저층Chl-a</option>
+				  			<option value="표층투명도">표층투명도</option>
+						</select>
+						<br/>
+					<label for="col2">변수 2 :</label>
+						<select name="col2" id="col2">
+				  			<option value="표층수온">표층수온</option>
+				  			<option value="저층수온">저층수온</option>
+				  			<option value="표층염분">표층염분</option>
+				  			<option value="저층염분">저층염분</option>
+				  			<option value="표층pH">표층pH</option>
+				  			<option value="저층pH">저층pH</option>
+				  			<option value="표층DO">표층DO</option>
+				  			<option value="저층DO">저층DO</option>
+				  			<option value="표층COD">표층COD</option>
+				  			<option value="저층COD">저층COD</option>
+				  			<option value="표층NH4-N">표층NH4-N</option>
+				  			<option value="저층NH4-N">저층NH4-N</option>
+				  			<option value="표층NO2-N">표층NO2-N</option>
+				  			<option value="저층NO2-N">저층NO2-N</option>
+				  			<option value="표층NO3-N">표층NO3-N</option>
+				  			<option value="저층NO3-N">저층NO3-N</option>
+				  			<option value="표층DIN">표층DIN</option>
+				  			<option value="저층DIN">저층DIN</option>
+				  			<option value="표층T-N">표층T-N</option>
+				  			<option value="저층T-N">저층T-N</option>
+				  			<option value="표층DIP">표층DIP</option>
+				  			<option value="저층DIP">저층DIP</option>
+				  			<option value="표층T-P">표층T-P</option>
+				  			<option value="저층T-P">저층T-P</option>
+				  			<option value="표층SiO2-Si">표층SiO2-Si</option>
+				  			<option value="저층SiO2-Si">저층SiO2-Si</option>
+				  			<option value="표층SS">표층SS</option>
+				  			<option value="저층SS">저층SS</option>
+							<option value="표층Chl-a">표층Chl-a</option>
+				  			<option value="저층Chl-a">저층Chl-a</option>
+				  			<option value="표층투명도">표층투명도</option>
+						</select><br/><br/>
+  					<button type="submit" class="btncsv" >predict</button> 	
+    			</form>
+    <br/><br/>
+    		<div>         
+        		 
+            	<h5> Kmeans 정확도 : {{score}} </h5>
+      		{% if on ==True %}	 
+        		<img src="data:image/PNG;base64,{{img}}"  width = "800", height = "600">
+        		</img>
+			{% else %}
+				<p></p>
+        	{% endif %}      
+    		</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+</body>
+</html>
