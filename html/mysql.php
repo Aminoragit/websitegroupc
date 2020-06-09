@@ -324,7 +324,7 @@
 							<dd>
 								<ul>
 									<li class="sub3_2_1"><a href="https://aminoragit.github.io/websitegroupc/html/howwork.html">DB 조회 방법</a></li>
-									<li class="sub3_2_2"><a href="https://aminoragit.github.io/websitegroupc/html/mysql.php">DB 조회 페이지</a></li>
+									<li class="sub3_2_2"><a href="http://groupc.dothome.co.kr/html/mysql.php">DB 조회 페이지</a></li>
 								</ul>									
 							</dd>		
 						</dl>	
@@ -426,10 +426,10 @@
 									</li>
 								</ul>
 								<ul class="sitemap-d2">
-									<li class="has-child"><a href="https://aminoragit.github.io/websitegroupc/html/mysql.php">DB조회</a>
+									<li class="has-child"><a href="http://groupc.dothome.co.kr/html/mysql.php">DB조회</a>
 										<ul class="sitemap-d3">
 											<li><a href="https://aminoragit.github.io/websitegroupc/html/howwork.html">DB조회 방법</a></li>
-											<li><a href="https://aminoragit.github.io/websitegroupc/html/mysql.php" >DB조회 페이지</a></li>
+											<li><a href="http://groupc.dothome.co.kr/html/mysql.php" >DB조회 페이지</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -469,7 +469,7 @@
 					<a href="http://groupc.dothome.co.kr/mysql.php"><span>DB 조회</span></a>
 						<ul class="lnb_list1">
 							<li><a href="https://aminoragit.github.io/websitegroupc/html/howwork.html">DB 조회 방법</a></li>								
-							<li><a href="https://aminoragit.github.io/websitegroupc/html/mysql.php">DB 조회페이지</a></li>	
+							<li><a href="http://groupc.dothome.co.kr/html/mysql.php">DB 조회페이지</a></li>	
 						</ul>
 				</li>
 			</ul>
@@ -492,7 +492,7 @@
 
 	
 <div class="search-form-container2 clearfix">
-	<form method="POST" action="https://aminoragit.github.io/websitegroupc/html/mysql.php">
+	<form method="POST" action="http://groupc.dothome.co.kr/html/mysql.php">
 		<div id="TB_search" align="left" style="
     padding-left: 35px;
 ">
