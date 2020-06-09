@@ -39,17 +39,19 @@ flask 폴더를 보면 test.py가 있다, flask 폴더에서 cmd를 열어주고
 ##### python test.py를 실행해주면
 ![python](https://user-images.githubusercontent.com/55749752/84124010-98d1c000-aa75-11ea-8985-b4dd1a83f6a3.png)
 
-![runserver](https://user-images.githubusercontent.com/55749752/84124011-996a5680-aa75-11ea-957a-f6388cce6bd1.png)
-와 같이 뜨는데 이때 인터넷 주소로 `localhost:5000/머신러닝명` 을 쳐주면 해당 머신러닝 페이지로 넘어간다.
-머신러닝명: tree, kmeans,knn, Gradient, r_forest, keras
-ex ) localhost:5000/tree
-![localhost5000](https://user-images.githubusercontent.com/55749752/84124012-996a5680-aa75-11ea-8df8-6a70ebc42325.png)
- 
- 
- 외부사이트에서 접속할경우 cmd->ipconfig->ipv4의 주소로 쳐주면된다.
-ex) 192.168.0.231 <== ipv4
-    192.168.0.231:5000/tree
-로 실행하면 외부에서도 접속이 가능하지만 서버를 열어놔야지만 가능하다, Django로 이식할 예정
+![runserver](https://user-images.githubusercontent.com/55749752/84124011-996a5680-aa75-11ea-957a-f6388cce6bd1.png)  
+
+와 같이 뜨는데 이때 인터넷 주소로 `localhost:5000/머신러닝명` 을 쳐주면 해당 머신러닝 페이지로 넘어간다.  
+머신러닝명: tree, kmeans,knn, Gradient, r_forest, keras  
 
 
-![predict example](https://user-images.githubusercontent.com/55749752/84124015-9a02ed00-aa75-11ea-9b05-391b2eacf271.png)
+ex ) localhost:5000/tree  
+![localhost5000](https://user-images.githubusercontent.com/55749752/84124012-996a5680-aa75-11ea-8df8-6a70ebc42325.png)  
+  
+ 외부사이트에서 접속할경우 cmd->ipconfig->ipv4의 주소로 쳐주면된다.  
+ex) 192.168.0.231 <== ipv4  
+    192.168.0.231:5000/tree  
+로 실행하면 외부에서도 접속이 가능하지만 서버를 열어놔야지만 가능하다, Django로 이식할 예정  
+
+  
+![predict example](https://user-images.githubusercontent.com/55749752/84124015-9a02ed00-aa75-11ea-9b05-391b2eacf271.png)  
