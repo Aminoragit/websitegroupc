@@ -33,6 +33,7 @@ flask 폴더를 보면 test.py가 있다, flask 폴더에서 cmd를 열어주고
 머신러닝명: tree, kmeans,knn, Gradient, r_forest, keras
 
 ex ) localhost:5000/tree
+ 
 
 외부사이트에서 접속할경우 cmd->ipconfig->ipv4의 주소로 쳐주면된다.
 ex) 192.168.0.231 <== ipv4
