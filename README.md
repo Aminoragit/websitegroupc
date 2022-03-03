@@ -18,7 +18,7 @@ git홈페이지와 별도로 dothome에서도 홈페이지를 구축하였다.
 
 https://aminoragit.github.io/websitegroupc/  
 
-http://groupc.dothome.co.kr/index.html
+~~http://groupc.dothome.co.kr/index.html~~ (만료됨 ㅠㅠ)
 
 
 
